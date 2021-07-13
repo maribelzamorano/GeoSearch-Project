@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="medium_detail_files" extends="topdev-default" namespace="/medium_detail_files">
+		<default-interceptor-ref name="submoduleStack"/>
+
+		<action name="view" class="com.topdev.tsp.action.modules.medium.detail.files.ViewAction" method="view">
+			<interceptor-ref name="moduleStack"/>
+			<result name="success">/pages/modules/medium/detail/files/view.jsp</result>
+			<result name="login">/pages/modules/medium/detail/files/login.jsp</result>
+		</action>	
+	</package>
+</struts>

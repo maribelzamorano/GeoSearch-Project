@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="medium_logview" extends="topdev-default" namespace="/medium_logview">
+		<action name="view" class="com.topdev.tsp.action.modules.medium.logview.ViewAction" method="view">
+			<interceptor-ref name="simpleStack"/>
+			<result name="success">/pages/modules/medium/logview/view.jsp</result>
+		</action>	
+
+		<action name="search" class="com.topdev.tsp.action.modules.medium.logview.DetailAction" method="search">
+			<interceptor-ref name="ajaxStack"/>
+			<result name="success">/pages/modules/medium/logview/search.jsp</result>
+		</action>	
+
+		<action name="form" class="com.topdev.tsp.action.modules.medium.logview.DetailAction" method="form">
+			<interceptor-ref name="ajaxStack"/>
+			<result name="success">/pages/modules/medium/logview/searchpage.jsp</result>
+		</action>
+		
+		<action name="print" class="com.topdev.tsp.action.modules.medium.logview.DetailAction" method="print">
+			<interceptor-ref name="ajaxStack"/>
+		</action>
+		
+	</package>
+</struts>

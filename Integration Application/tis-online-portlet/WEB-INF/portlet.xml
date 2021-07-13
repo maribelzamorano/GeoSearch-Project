@@ -1,0 +1,481 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<portlet-app
+	version="1.0"
+	xmlns="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd http://java.sun.com/xml/ns/portlet/portlet-app_1_0.xsd"
+	id="struts-portlet">
+
+  <portlet id="portlet_katalog">
+    <description xml:lang="DE">Veranstaltungskatalog</description>
+    <portlet-name>portlet_katalog</portlet-name>
+    <display-name xml:lang="DE">Veranstaltungskatalog</display-name>
+    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+    <init-param><name>viewNamespace</name>		<value>/catalog</value></init-param>
+    <init-param><name>defaultViewAction</name>	<value>index</value></init-param>
+	<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+    <portlet-info><title>Veranstaltungskatalog</title><short-title>VESG</short-title><keywords>tis,katalog,portlet</keywords></portlet-info>
+  </portlet>
+
+  <portlet id="portlet_businesspartner">
+    <description xml:lang="DE">Geschaeftspartner</description>
+    <portlet-name>portlet_businesspartner</portlet-name>
+    <display-name xml:lang="DE">Geschaeftspartner</display-name>
+    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+    <init-param><name>viewNamespace</name>		<value>/businesspartner</value></init-param>
+    <init-param><name>defaultViewAction</name>	<value>index</value></init-param>
+	<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+    <portlet-info><title>Geschaeftspartner</title><short-title>GEPA</short-title><keywords>tis,katalog,portlet</keywords></portlet-info>
+  </portlet>
+
+  <portlet id="portlet_mybusinesspartner">
+    <description xml:lang="DE">Meine Daten</description>
+    <portlet-name>portlet_mybusinesspartner</portlet-name>
+    <display-name xml:lang="DE">Meine Daten</display-name>
+    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+    <init-param><name>viewNamespace</name>		<value>/businesspartner</value></init-param>
+    <init-param><name>defaultViewAction</name>	<value>my</value></init-param>
+	<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+    <portlet-info><title>Mein Geschaeftspartner</title><short-title>GEPA</short-title><keywords>tis,portlet</keywords></portlet-info>
+  </portlet>
+  
+	<portlet id="portlet_school_search">
+	    <description xml:lang="DE">Schulen suchen</description>
+	    <portlet-name>portlet_school_search</portlet-name>
+	    <display-name xml:lang="DE">Schulen suchen</display-name>
+	    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+	    <init-param><name>viewNamespace</name>		<value>/school_search</value></init-param>
+	    <init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+		<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+	    <portlet-info><title>Schulen suchen</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+	</portlet>
+   
+	<portlet id="portlet_section_documents">
+	    <description xml:lang="DE">Dynamische Dokumenteanzeige</description>
+	    <portlet-name>portlet_section_documents</portlet-name>
+	    <display-name xml:lang="DE">Dynamische Dokumenteanzeige</display-name>
+	    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+	    <init-param><name>viewNamespace</name>		<value>/section_documents</value></init-param>
+	    <init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+		<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+	    <portlet-info><title>Dokumente</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+	</portlet>
+   
+ 	<portlet id="portlet_school_intention">
+	    <description xml:lang="DE">Inhaltliche Schwerpunkte</description>
+	    <portlet-name>portlet_school_intention</portlet-name>
+	    <display-name xml:lang="DE">Inhaltliche Schwerpunkte</display-name>
+	    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+	    <init-param><name>viewNamespace</name>		<value>/school_intention</value></init-param>
+	    <init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+		<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+	    <portlet-info><title>Inhaltliche Schwerpunkte</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+	</portlet>
+   
+   <portlet id="portlet_neuter_resources">
+    <description xml:lang="DE">Saechliche Ressourcen</description>
+    <portlet-name>portlet_neuter_resources</portlet-name>
+    <display-name xml:lang="DE">Saechliche Ressourcen</display-name>
+    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+    <init-param><name>viewNamespace</name>		<value>/neuter_resources</value></init-param>
+    <init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+	<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+    <portlet-info><title>Saechliche Ressourcen</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+  </portlet>
+  
+   <portlet id="portlet_school_library">
+    <description xml:lang="DE">Schulbibliothek</description>
+    <portlet-name>portlet_school_library</portlet-name>
+    <display-name xml:lang="DE">Schulbibliothek</display-name>
+    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+    <init-param><name>viewNamespace</name>		<value>/school_library</value></init-param>
+    <init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+	<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+    <portlet-info><title>Schulbibliothek</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+  </portlet>
+  
+  <portlet id="portlet_media">
+    <description xml:lang="DE">Medienausstattung</description>
+    <portlet-name>portlet_media</portlet-name>
+    <display-name xml:lang="DE">Medienausstattung</display-name>
+    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+    <init-param><name>viewNamespace</name>		<value>/media</value></init-param>
+    <init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+	<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+    <portlet-info><title>Medienausstattung</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+  </portlet>
+  
+  <portlet id="portlet_working_group">
+    <description xml:lang="DE">Arbeitsgemeinschaften</description>
+    <portlet-name>portlet_working_group</portlet-name>
+    <display-name xml:lang="DE">Arbeitsgemeinschaften</display-name>
+    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+    <init-param><name>viewNamespace</name>		<value>/working_group</value></init-param>
+    <init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+	<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+    <portlet-info><title>Arbeitsgemeinschaften</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+  </portlet>
+  
+  <portlet id="portlet_pupil_magazine">
+    <description xml:lang="DE">Schuelerzeitung</description>
+    <portlet-name>portlet_pupil_magazine</portlet-name>
+    <display-name xml:lang="DE">Schuelerzeitung</display-name>
+    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+    <init-param><name>viewNamespace</name>		<value>/pupil_magazine</value></init-param>
+    <init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+	<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+    <portlet-info><title>Schuelerzeitung</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+  </portlet>
+  
+  <portlet id="portlet_personal_resources">
+    <description xml:lang="DE">Personelle Ressourcen</description>
+    <portlet-name>portlet_personal_resources</portlet-name>
+    <display-name xml:lang="DE">Personelle Ressourcen</display-name>
+    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+    <init-param><name>viewNamespace</name>		<value>/personal_resources</value></init-param>
+    <init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+	<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+    <portlet-info><title>Personelle Ressourcen</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+  </portlet>
+  
+   <portlet id="portlet_personal_resources_statistic">
+    <description xml:lang="DE">Personelle Ressourcen (Statistik)</description>
+    <portlet-name>portlet_personal_resources_statistic</portlet-name>
+    <display-name xml:lang="DE">Personelle Ressourcen (Statistik)</display-name>
+    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+    <init-param><name>viewNamespace</name>		<value>/personal_statistic</value></init-param>
+    <init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+	<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+    <portlet-info><title>Personelle Ressourcen (Statistik)</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+  </portlet>
+  
+  <portlet id="portlet_cooperation">
+    <description xml:lang="DE">Kooperationen</description>
+    <portlet-name>portlet_cooperation</portlet-name>
+    <display-name xml:lang="DE">Kooperationen</display-name>
+    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+    <init-param><name>viewNamespace</name>		<value>/cooperation</value></init-param>
+    <init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+	<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+    <portlet-info><title>Kooperationen</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+  </portlet>
+  
+  <portlet id="portlet_contributer">
+    <description xml:lang="DE">Mitwirkung</description>
+    <portlet-name>portlet_contributer</portlet-name>
+    <display-name xml:lang="DE">Mitwirkung</display-name>
+    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+    <init-param><name>viewNamespace</name>		<value>/contributer</value></init-param>
+    <init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+	<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+    <portlet-info><title>Mitwirkung</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+  </portlet>
+
+  <portlet id="portlet_documents">
+    <description xml:lang="DE">Dokumente</description>
+    <portlet-name>portlet_documents</portlet-name>
+    <display-name xml:lang="DE">Dokumente</display-name>
+    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+    <init-param><name>viewNamespace</name>		<value>/documents</value></init-param>
+    <init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+	<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+    <portlet-info><title>Dokumente</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+  </portlet>
+
+  <portlet id="portlet_learner_structure">
+    <description xml:lang="DE">Schülerstrukturdaten</description>
+    <portlet-name>portlet_learner_structure</portlet-name>
+    <display-name xml:lang="DE">Schülerstrukturdaten</display-name>
+    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+    <init-param><name>viewNamespace</name>		<value>/learner_structure</value></init-param>
+    <init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+	<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+    <portlet-info><title>Schuelerstrukturdaten</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+  </portlet>
+
+  <portlet id="portlet_school_evolution">
+    <description xml:lang="DE">Schulentwicklung</description>
+    <portlet-name>portlet_school_evolution</portlet-name>
+    <display-name xml:lang="DE">Schulentwicklung</display-name>
+    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+    <init-param><name>viewNamespace</name>		<value>/school_evolution</value></init-param>
+    <init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+	<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+    <portlet-info><title>Schulentwicklung</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+  </portlet>
+  
+   <portlet id="portlet_activate_quality">
+    <description xml:lang="DE">Wirkungsqualitäten</description>
+    <portlet-name>portlet_activate_quality</portlet-name>
+    <display-name xml:lang="DE">Wirkungsqualitäten</display-name>
+    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+    <init-param><name>viewNamespace</name>		<value>/activate_quality</value></init-param>
+    <init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+	<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+    <portlet-info><title>Wirkungsqualitaeten</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+  </portlet>
+
+  <portlet id="portlet_school_life">
+    <description xml:lang="DE">Schulleben</description>
+    <portlet-name>portlet_school_life</portlet-name>
+    <display-name xml:lang="DE">Schulleben</display-name>
+    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+    <init-param><name>viewNamespace</name>		<value>/school_life</value></init-param>
+    <init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+	<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+    <portlet-info><title>Schulleben</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+  </portlet>
+
+  <portlet id="portlet_portal_navigation">
+    <description xml:lang="DE">Portal Navigation</description>
+    <portlet-name>portlet_portal_navigation</portlet-name>
+    <display-name xml:lang="DE">Portal Navigation</display-name>
+    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+    <init-param><name>viewNamespace</name>		<value>/portal_navigation</value></init-param>
+    <init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+	<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+    <portlet-info><title>Navigation</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+  </portlet>
+
+  <portlet id="portlet_school_navigation">
+    <description xml:lang="DE">Schulportait</description>
+    <portlet-name>portlet_school_navigation</portlet-name>
+    <display-name xml:lang="DE">Schulportait</display-name>
+    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+    <init-param><name>viewNamespace</name>		<value>/school_navigation</value></init-param>
+    <init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+	<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+    <portlet-info><title>Navigation</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+  </portlet>
+  
+   <portlet id="portlet_login">
+    <description xml:lang="DE">Startseitenportlet</description>
+    <portlet-name>portlet_login</portlet-name>
+    <display-name xml:lang="DE">Startseitenportlet</display-name>
+    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+    <init-param><name>viewNamespace</name>		<value>/login</value></init-param>
+    <init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+	<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+    <portlet-info><title>Startseitenportlet</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+  </portlet>
+  
+	<portlet id="portlet_system">
+		<description xml:lang="DE">Systempflege</description>
+		<portlet-name>portlet_system</portlet-name>
+		<display-name xml:lang="DE">Systempflege</display-name>
+		<portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+		<init-param><name>viewNamespace</name>		<value>/system</value></init-param>
+		<init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+		<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+		<portlet-info><title>Systempflege</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+	</portlet>
+
+	<portlet id="portlet_school_image">
+		<description xml:lang="DE">Schulbild</description>
+		<portlet-name>portlet_school_image</portlet-name>
+		<display-name xml:lang="DE">Schulbild</display-name>
+		<portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+		<init-param><name>viewNamespace</name>		<value>/school_image</value></init-param>
+		<init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+		<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+		<portlet-info><title>Schulbild</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+	</portlet>
+
+	<portlet id="portlet_contact">
+		<description xml:lang="DE">Kontakt</description>
+		<portlet-name>portlet_contact</portlet-name>
+		<display-name xml:lang="DE">Kontakt</display-name>
+		<portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+		<init-param><name>viewNamespace</name>		<value>/contact</value></init-param>
+		<init-param><name>defaultViewAction</name>	<value>edit</value></init-param>
+		<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+		<portlet-info><title>Kontakt</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+	</portlet>
+
+	<portlet id="portlet_medium_category">
+		<description xml:lang="DE">Medien Kategorie</description>
+		<portlet-name>portlet_medium_category</portlet-name>
+		<display-name xml:lang="DE">Medien Kategorie</display-name>
+		<portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+		<init-param><name>viewNamespace</name>		<value>/medium_category</value></init-param>
+		<init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+		<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+		<portlet-info><title>Medien Kategorie</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+	</portlet>
+	
+	<portlet id="portlet_medium_logview">
+		<description xml:lang="DE">Importerlog Anzeigen</description>
+		<portlet-name>portlet_medium_logview</portlet-name>
+		<display-name xml:lang="DE">Importerlog Anzeigen</display-name>
+		<portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+		<init-param><name>viewNamespace</name>		<value>/medium_logview</value></init-param>
+		<init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+		<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+		<portlet-info><title>Importerlog Anzeigen</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+	</portlet>
+
+	<portlet id="portlet_medium_navigation">
+		<description xml:lang="DE">Medien Navigation</description>
+		<portlet-name>portlet_medium_navigation</portlet-name>
+		<display-name xml:lang="DE">Medien Navigation</display-name>
+		<portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+		<init-param><name>viewNamespace</name>		<value>/medium_navigation</value></init-param>
+		<init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+		<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+		<portlet-info><title>Medien Navigation</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+	</portlet>
+
+	<portlet id="portlet_medium_result">
+		<description xml:lang="DE">Medienauflistung</description>
+		<portlet-name>portlet_medium_result</portlet-name>
+		<display-name xml:lang="DE">Medienauflistung</display-name>
+		<portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+		<init-param><name>viewNamespace</name>		<value>/medium_result</value></init-param>
+		<init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+		<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+		<portlet-info><title>Medienauflistung</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+	</portlet>
+
+	<portlet id="portlet_medium_result_newest">
+		<description xml:lang="DE">Medienauflistung neueste</description>
+		<portlet-name>portlet_medium_result_newest</portlet-name>
+		<display-name xml:lang="DE">Medienauflistung neueste</display-name>
+		<portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+		<init-param><name>viewNamespace</name>		<value>/medium_result_newest</value></init-param>
+		<init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+		<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+		<portlet-info><title>Medienauflistung neueste</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+	</portlet>
+
+	<portlet id="portlet_medium_result_favorite">
+		<description xml:lang="DE">Medienauflistung beliebteste</description>
+		<portlet-name>portlet_medium_result_favorite</portlet-name>
+		<display-name xml:lang="DE">Medienauflistung beliebteste</display-name>
+		<portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+		<init-param><name>viewNamespace</name>		<value>/medium_result_favorite</value></init-param>
+		<init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+		<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+		<portlet-info><title>Medienauflistung beliebteste</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+	</portlet>
+
+	<portlet id="portlet_medium_search">
+		<description xml:lang="DE">Medien Suche</description>
+		<portlet-name>portlet_medium_search</portlet-name>
+		<display-name xml:lang="DE">Medien Suche</display-name>
+		<portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+		<init-param><name>viewNamespace</name>		<value>/medium_search</value></init-param>
+		<init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+		<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+		<portlet-info><title>Medien Suche</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+	</portlet>
+  
+
+	<portlet id="portlet_medium_detail_overview">
+		<description xml:lang="DE">Mediendetails</description>
+		<portlet-name>portlet_medium_detail_overview</portlet-name>
+		<display-name xml:lang="DE">Mediendetails</display-name>
+		<portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+		<init-param><name>viewNamespace</name>		<value>/medium_detail_overview</value></init-param>
+		<init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+		<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+		<portlet-info><title>Mediendetails</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+	</portlet>
+  
+	<portlet id="portlet_medium_detail_preview">
+		<description xml:lang="DE">Vorschau</description>
+		<portlet-name>portlet_medium_detail_preview</portlet-name>
+		<display-name xml:lang="DE">Vorschau</display-name>
+		<portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+		<init-param><name>viewNamespace</name>		<value>/medium_detail_preview</value></init-param>
+		<init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+		<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+		<portlet-info><title>Vorschau</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+	</portlet>
+  
+	<portlet id="portlet_medium_detail_files">
+		<description xml:lang="DE">Dateien</description>
+		<portlet-name>portlet_medium_detail_files</portlet-name>
+		<display-name xml:lang="DE">Dateien</display-name>
+		<portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+		<init-param><name>viewNamespace</name>		<value>/medium_detail_files</value></init-param>
+		<init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+		<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+		<portlet-info><title>Dateien</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+	</portlet>
+    
+	<portlet id="portlet_medium_detail_links">
+		<description xml:lang="DE">externe Links</description>
+		<portlet-name>portlet_medium_detail_links</portlet-name>
+		<display-name xml:lang="DE">externe Links</display-name>
+		<portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+		<init-param><name>viewNamespace</name>		<value>/medium_detail_links</value></init-param>
+		<init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+		<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+		<portlet-info><title>externe Links</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+	</portlet>
+  
+  	<portlet id="portlet_schools_bychance">
+		<description xml:lang="DE">Schulbilder</description>
+		<portlet-name>portlet_portrait_schools_bychance</portlet-name>
+		<display-name xml:lang="DE">Schulbilder</display-name>
+		<portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+		<init-param><name>viewNamespace</name>		<value>/portrait_schools_bychance</value></init-param>
+		<init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+		<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+		<portlet-info><title>Schulen in Thueringen</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+	</portlet>
+  
+  	<portlet id="portlet_common_image">
+		<description xml:lang="DE">Bild</description>
+		<portlet-name>portlet_common_image</portlet-name>
+		<display-name xml:lang="DE">Bild</display-name>
+		<portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+		<init-param><name>viewNamespace</name>		<value>/common_image</value></init-param>
+		<init-param><name>defaultViewAction</name>	<value>view</value></init-param>
+		<expiration-cache>0</expiration-cache><supports><mime-type>text/html</mime-type></supports><supported-locale>de</supported-locale>
+		<portlet-info><title>Bild</title><short-title> </short-title><keywords>tis,portlet</keywords></portlet-info>
+	</portlet>
+<!--
+	<portlet id="StrutsPortlet">
+    <description xml:lang="EN">Struts Test Portlet</description>
+    <portlet-name>StrutsPortlet</portlet-name>
+    <display-name xml:lang="EN">Struts Test Portlet</display-name>
+    <portlet-class>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</portlet-class>
+    <init-param>
+		<name>viewNamespace</name>
+		<value>/view</value>
+	</init-param>
+    <init-param>
+		<name>defaultViewAction</name>
+		<value>index</value>
+	</init-param>
+	<init-param>
+		<name>editNamespace</name>
+		<value>/edit</value>
+	</init-param>
+    <init-param>
+		<name>defaultEditAction</name>
+		<value>index</value>
+	</init-param>
+	<init-param>
+		<name>helpNamespace</name>
+		<value>/help</value>
+	</init-param>
+    <init-param>
+		<name>defaultHelpAction</name>
+		<value>index</value>
+	</init-param>
+    <expiration-cache>0</expiration-cache>
+    <supports>
+      <mime-type>text/html</mime-type>
+      <portlet-mode>edit</portlet-mode>
+      <portlet-mode>help</portlet-mode>
+    </supports>
+    <supported-locale>en</supported-locale>
+    <portlet-info>
+      <title>My StrutsPortlet portlet</title>
+      <short-title>SP</short-title>
+      <keywords>struts,portlet</keywords>
+    </portlet-info>
+  </portlet> -->
+</portlet-app>

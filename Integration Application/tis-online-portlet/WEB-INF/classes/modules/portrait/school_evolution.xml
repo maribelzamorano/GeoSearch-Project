@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<package name="school_evolution" extends="topdev-default" namespace="/school_evolution">
+		<interceptors>
+			<interceptor name="topdev-action" class="com.topdev.tsp.interceptor.ActionInterceptor"/>
+		</interceptors>
+		
+		<action name="index" class="com.topdev.tsp.action.modules.school_evolution.DetailAction">
+			<result name="view">/pages/modules/school_evolution/view.jsp</result>
+			<result name="edit">/pages/modules/school_evolution/edit.jsp</result>
+			<result name="saved">/pages/modules/school_evolution/saved.jsp</result>
+		</action>
+		
+		<action name="view" class="com.topdev.tsp.action.modules.school_evolution.DetailAction" method="view">
+			<result name="view">/pages/modules/school_evolution/view.jsp</result>
+			<result name="edit">/pages/modules/school_evolution/edit.jsp</result>
+			<result name="saved">/pages/modules/school_evolution/saved.jsp</result>
+		</action>
+
+		<action name="edit" class="com.topdev.tsp.action.modules.school_evolution.DetailAction" method="edit">
+			<result name="view">/pages/modules/school_evolution/view.jsp</result>
+			<result name="edit">/pages/modules/school_evolution/edit.jsp</result>
+			<result name="saved">/pages/modules/school_evolution/saved.jsp</result>
+		</action>
+		
+		<action name="save" class="com.topdev.tsp.action.modules.school_evolution.DetailAction" method="save">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="saved">/pages/lib/component/saved.jsp</result>
+		</action>	
+<!-- Drucken_______________________________________________________________________________________________________________________________-->
+		<action name="print" class="com.topdev.tsp.action.modules.school_evolution.DetailAction" method="print">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+		</action>				
+<!-- __________________________________________________________________________________________________________________________-->
+		<action name="intention-detail_*" class="com.topdev.tsp.action.modules.school_evolution.submodules.IntentionDetailAction" method="{1}">
+			<interceptor-ref name="topdevActionStack"/>
+			<result name="success">/pages/modules/school_evolution/submodules/form-intention.jsp</result>
+			<result name="saved">/pages/lib/component/saved-inline.jsp</result>
+			<result name="list" type="chain">intention-detail_edit</result>
+		</action>		
+<!-- __________________________________________________________________________________________________________________________-->
+		<action name="emphasis-list_*" class="com.topdev.tsp.action.modules.school_evolution.submodules.EmphasisListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/school_evolution/submodules/list-emphasis.jsp</result>
+		</action>
+
+		<action name="emphasis-detail_*" class="com.topdev.tsp.action.modules.school_evolution.submodules.EmphasisDetailAction" method="{1}">
+			<interceptor-ref name="topdevActionStack"/>
+			<result name="success">/pages/modules/school_evolution/submodules/form-emphasis.jsp</result>
+			<result name="saved">/pages/lib/component/saved-inline.jsp</result>
+			<result name="list" type="chain">emphasis-list_edit</result>
+		</action>
+<!-- __________________________________________________________________________________________________________________________-->
+		<action name="instrument-list_*" class="com.topdev.tsp.action.modules.school_evolution.submodules.InstrumentListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/school_evolution/submodules/list-instrument.jsp</result>
+		</action>
+
+		<action name="instrument-detail_*" class="com.topdev.tsp.action.modules.school_evolution.submodules.InstrumentDetailAction" method="{1}">
+			<interceptor-ref name="topdevActionStack"/>
+			<result name="success">/pages/modules/school_evolution/submodules/form-instrument.jsp</result>
+			<result name="saved">/pages/lib/component/saved-inline.jsp</result>
+			<result name="list" type="chain">instrument-list_edit</result>
+		</action>
+	</package>
+</struts>

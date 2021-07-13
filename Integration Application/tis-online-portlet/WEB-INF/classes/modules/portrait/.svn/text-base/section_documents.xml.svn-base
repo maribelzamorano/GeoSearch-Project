@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	
+	<package name="section_documents" extends="topdev-default" namespace="/section_documents">
+		<interceptors>
+			<interceptor name="topdev-action" class="com.topdev.tsp.interceptor.ActionInterceptor"/>
+		</interceptors>
+		
+		<action name="index" class="com.topdev.tsp.action.modules.section_documents.DetailAction">
+			<result name="view">/pages/modules/section_documents/view.jsp</result>
+			<result name="edit">/pages/modules/section_documents/edit.jsp</result>
+			<result name="saved">/pages/lib/component/saved.jsp</result>
+		</action>
+		
+		<action name="view" class="com.topdev.tsp.action.modules.section_documents.DetailAction" method="view">
+			<result name="view">/pages/modules/section_documents/view.jsp</result>
+			<result name="edit">/pages/modules/section_documents/edit.jsp</result>
+			<result name="saved">/pages/lib/component/saved.jsp</result>
+		</action>	
+
+		<action name="edit" class="com.topdev.tsp.action.modules.section_documents.DetailAction" method="edit">
+			<result name="view">/pages/modules/section_documents/view.jsp</result>
+			<result name="edit">/pages/modules/section_documents/edit.jsp</result>
+			<result name="saved">/pages/lib/component/saved.jsp</result>
+		</action>
+		
+		<action name="save" class="com.topdev.tsp.action.modules.section_documents.DetailAction" method="save">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="saved">/pages/lib/component/saved.jsp</result>
+		</action>	
+		
+		<action name="document-list_*" class="com.topdev.tsp.action.modules.section_documents.submodules.DocumentListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/section_documents/submodules/list-documents.jsp</result>
+		</action>
+	</package>		
+</struts>

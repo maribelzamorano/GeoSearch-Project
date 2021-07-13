@@ -1,0 +1,3 @@
+struts.objectFactory = spring
+struts.multipart.parser=org.apache.struts2.dispatcher.multipart.JakartaMultiPartRequest
+struts.multipart.maxSize=209715200

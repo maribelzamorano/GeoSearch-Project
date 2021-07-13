@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="system" extends="topdev-default" namespace="/system">
+		<action name="view" class="com.topdev.tsp.action.modules.system.DetailAction" method="edit">
+			<result name="view">/pages/modules/system/view.jsp</result>
+		</action>
+<!-- ________________________________________________________________________________________________________________________________________ -->
+		<action name="instrument-edit" class="com.topdev.tsp.action.modules.system.submodules.InstrumentDetailAction" method="init_edit">
+			<result name="view">/pages/modules/system/view.jsp</result>
+			<result name="edit">/pages/modules/system/edit-instrument.jsp</result>
+			<result name="success">/pages/modules/system/edit-instrument.jsp</result>
+			<result name="saved">/pages/modules/system/saved.jsp</result>
+		</action>
+		<action name="instrument-save" class="com.topdev.tsp.action.modules.system.submodules.InstrumentDetailAction" method="save_final">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="saved">/pages/lib/component/saved.jsp</result>
+		</action>
+		<action name="instrument-list_*" class="com.topdev.tsp.action.modules.system.submodules.InstrumentListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/system/submodules/list-instrument.jsp</result>
+		</action>
+		<action name="instrument-detail_*" class="com.topdev.tsp.action.modules.system.submodules.InstrumentDetailAction" method="{1}">
+			<interceptor-ref name="topdevActionStack"/>
+			<result name="success">/pages/modules/system/submodules/form-instrument.jsp</result>
+			<result name="list" type="chain">instrument-list_edit</result>
+		</action>
+<!-- ________________________________________________________________________________________________________________________________________ -->
+		<action name="project-edit" class="com.topdev.tsp.action.modules.system.submodules.ProjectDetailAction" method="init_edit">
+			<result name="view">/pages/modules/system/view.jsp</result>
+			<result name="edit">/pages/modules/system/edit-project.jsp</result>
+			<result name="success">/pages/modules/system/edit-project.jsp</result>
+			<result name="saved">/pages/modules/system/saved.jsp</result>
+		</action>
+		<action name="project-save" class="com.topdev.tsp.action.modules.system.submodules.ProjectDetailAction" method="save_final">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="saved">/pages/lib/component/saved.jsp</result>
+		</action>
+		<action name="project-list_*" class="com.topdev.tsp.action.modules.system.submodules.ProjectListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/system/submodules/list-project.jsp</result>
+		</action>
+		<action name="project-detail_*" class="com.topdev.tsp.action.modules.system.submodules.ProjectDetailAction" method="{1}">
+			<interceptor-ref name="topdevActionStack"/>
+			<result name="success">/pages/modules/system/submodules/form-project.jsp</result>
+			<result name="list" type="chain">project-list_edit</result>
+		</action>
+<!-- ________________________________________________________________________________________________________________________________________ -->
+		<action name="contest-edit" class="com.topdev.tsp.action.modules.system.submodules.ContestDetailAction" method="init_edit">
+			<result name="view">/pages/modules/system/view.jsp</result>
+			<result name="edit">/pages/modules/system/edit-contest.jsp</result>
+			<result name="success">/pages/modules/system/edit-contest.jsp</result>
+			<result name="saved">/pages/modules/system/saved.jsp</result>
+		</action>
+		<action name="contest-save" class="com.topdev.tsp.action.modules.system.submodules.ContestDetailAction" method="save_final">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="saved">/pages/lib/component/saved.jsp</result>
+		</action>
+		<action name="contest-list_*" class="com.topdev.tsp.action.modules.system.submodules.ContestListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/system/submodules/list-contest.jsp</result>
+		</action>
+		<action name="contest-detail_*" class="com.topdev.tsp.action.modules.system.submodules.ContestDetailAction" method="{1}">
+			<interceptor-ref name="topdevActionStack"/>
+			<result name="success">/pages/modules/system/submodules/form-contest.jsp</result>
+			<result name="list" type="chain">contest-list_edit</result>
+		</action>
+<!-- ________________________________________________________________________________________________________________________________________ -->
+		<action name="pts-edit" class="com.topdev.tsp.action.modules.system.submodules.PtsDetailAction" method="init_edit">
+			<result name="view">/pages/modules/system/view.jsp</result>
+			<result name="edit">/pages/modules/system/edit-pts.jsp</result>
+			<result name="success">/pages/modules/system/edit-pts.jsp</result>
+			<result name="saved">/pages/modules/system/saved.jsp</result>
+		</action>
+		<action name="pts-list_*" class="com.topdev.tsp.action.modules.system.submodules.PtsListAction" method="{1}">
+			<interceptor-ref name="topdevActionStack"/>
+			<result name="success">/pages/modules/system/submodules/list-pts.jsp</result>
+		</action>
+<!-- ________________________________________________________________________________________________________________________________________ -->
+		
+	</package>
+</struts>

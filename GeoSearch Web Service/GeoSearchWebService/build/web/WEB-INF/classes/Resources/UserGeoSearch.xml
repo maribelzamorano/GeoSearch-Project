@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+    Document   : UserGeoSearch.xml
+    Created on : 12. August 2010, 16:14
+    Author     : maribelzamorano
+    Description:
+        Purpose of the document follows.
+-->
+<!DOCTYPE sqlMap
+PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="geoSearch.topdev.com.BobjGeoUser">
+<!-- Usa un recubrimiento de un tipo primitivo (ej. java.lang.Integer) como parámetro y permite
+que los resultados sean auto-mapeados a las propiedades del JavaBean Person -->
+
+
+
+  <parameterMap id="Parameter" class="geoSearch.topdev.com.BobjGeoUser">
+            <parameter property="user_postalcode"                       mode="IN"		jdbcType="INTEGER" nullValue=""/>
+            <parameter property="user_city"                             mode="IN"		jdbcType="VARCHAR" nullValue=""/>
+            <parameter property="user_street"                           mode="IN"		jdbcType="VARCHAR" nullValue=""/>
+            <parameter property="user_longitude"                        mode="INOUT"		jdbcType="INTEGER" nullValue=""/>
+            <parameter property="user_latitude"                         mode="INOUT"		jdbcType="INTEGER" nullValue=""/>
+
+  </parameterMap>
+
+
+    <procedure id="User.getGeoSearchResults" resultClass="geoSearch.topdev.com.BobjGeoUser"  parameterMap="Parameter">
+                {
+		call TIS02O_THILLM_SYST.geoiadm.pss_GetUserGeoInformation
+		(
+                        @POSTAL_CODE=?,
+                        @CITY=?,
+                        @STREET=?,
+                        @USER_LONGITUDE=?,
+                        @USER_LATITUDE=?
+
+		)
+             }
+    </procedure>
+
+
+</sqlMap>

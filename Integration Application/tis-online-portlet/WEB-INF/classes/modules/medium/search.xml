@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="medium_search" extends="topdev-default" namespace="/medium_search">
+		<action name="view" class="com.topdev.tsp.action.modules.medium.search.ViewAction" method="view">
+			<interceptor-ref name="simpleStack"/>
+			<result name="success">/pages/modules/medium/search/view.jsp</result>
+		</action>	
+
+		<action name="search" class="com.topdev.tsp.action.modules.medium.search.DetailAction" method="search">
+			<interceptor-ref name="ajaxStack"/>
+			<result name="success">/pages/modules/medium/search/search.jsp</result>
+			<result name="fault">/pages/modules/medium/search/searchfault.jsp</result>
+		</action>	
+
+		<action name="form" class="com.topdev.tsp.action.modules.medium.search.DetailAction" method="form">
+			<interceptor-ref name="ajaxStack"/>
+			<result name="success">/pages/modules/medium/search/form.jsp</result>
+		</action>
+		
+		<action name="sachgebiete_select" class="com.topdev.tsp.action.modules.medium.search.SachgebieteSelectAction" method="view">
+			<interceptor-ref name="ajaxStack"/>
+			<result name="success">/pages/modules/medium/search/sachgebiete-select.jsp</result>
+		</action>
+		
+		<action name="schlagworte_select" class="com.topdev.tsp.action.modules.medium.search.SchlagworteSelectAction" method="view">
+			<interceptor-ref name="ajaxStack"/>
+			<result name="success">/pages/modules/medium/search/schlagworte-select.jsp</result>
+		</action>
+		
+		
+	</package>
+</struts>

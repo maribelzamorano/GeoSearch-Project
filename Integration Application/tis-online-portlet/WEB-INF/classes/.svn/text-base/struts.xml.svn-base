@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE xwork PUBLIC
+    "-//OpenSymphony Group//XWork 1.1.1//EN"
+    "http://www.opensymphony.com/xwork/xwork-1.1.1.dtd">
+<xwork>
+	<include file="struts-portlet-default.xml" />
+
+	<package name="topdev-action-default" extends="struts-portlet-default" namespace="/">
+		<interceptors>
+            <interceptor-stack name="topdevBasicStack">
+                <interceptor-ref name="basicStack"/>
+            </interceptor-stack>
+			<interceptor name="topdev-action" class="com.topdev.tsp.interceptor.ActionInterceptor"/>
+			<interceptor-stack name="topdevDefaultActionStack">
+				<interceptor-ref name="portletDefaultStack"/>
+				<interceptor-ref name="topdev-action"/>
+			</interceptor-stack>
+		</interceptors>
+		<default-interceptor-ref name="topdevDefaultActionStack"/>
+	</package>
+
+	<include file="tis-portlets.xml" />
+
+	<package name="ajax" extends="topdev-action-default" namespace="/ajax">
+		<action name="triggerEvent" 				class="com.topdev.tsp.action.lib.TriggerEventAction"><interceptor-ref name="topdevBasicStack"/></action>
+		<action name="setGepa"						class="com.topdev.tsp.action.modules.school_search.SetValueAction"></action>
+		<action name="dropdown"						class="com.topdev.tsp.action.lib.xml.DropdownAction"><result name="success">/pages/lib/xml/dropdown.jsp</result><result name="error">/pages/lib/component/error.jsp</result></action>
+		<action name="dropdown-content"				class="com.topdev.tsp.action.lib.xml.DropdownContentAction"><result name="success">/pages/lib/xml/dropdown-content.jsp</result><result name="error">/pages/lib/component/error.jsp</result></action>
+		<action name="dropdown_filtered-content"	class="com.topdev.tsp.action.lib.xml.DropdownFilteredContentAction"><result name="success">/pages/lib/xml/dropdown-content.jsp</result><result name="error">/pages/lib/component/error.jsp</result></action>
+		<action name="setAttribute"					class="com.topdev.tsp.action.lib.SetAttributeAction"><result name="success">/pages/lib/set-attribute.jsp</result><result name="error">/pages/lib/component/error.jsp</result></action>
+		<action name="download"						class="com.topdev.tsp.action.lib.DownloadAction"><result name="error">/pages/lib/component/error.jsp</result></action>
+		<action name="download-stream"				class="com.topdev.tsp.action.lib.DownloadStreamAction"><result name="error">/pages/lib/component/error.jsp</result></action>
+		<action name="invalidateSession"			class="com.topdev.tsp.action.lib.InvalidateSessionAction"><result name="success">/pages/lib/component/session-invalidate.jsp</result></action>
+	</package>
+
+	
+</xwork>

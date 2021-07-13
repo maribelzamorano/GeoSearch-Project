@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="topdev-default" extends="struts-portlet-default" namespace="/">
+        <interceptors>
+            <interceptor-stack name="fileUploadStack">
+            	<interceptor-ref name="fileUpload"><param name="maximumSize">50000000</param></interceptor-ref>
+                <interceptor-ref name="basicStack"/>
+            </interceptor-stack>
+			<interceptor name="topdev-portlet" class="com.topdev.tsp.interceptor.PortletInterceptor"/>
+			<interceptor name="topdev-action" class="com.topdev.tsp.interceptor.ActionInterceptor"/>
+			
+			<interceptor-stack name="topdevDefaultStack">
+				<interceptor-ref name="portletDefaultStack"/>
+				<interceptor-ref name="topdev-portlet"/>
+			</interceptor-stack>
+			<interceptor-stack name="topdevActionStack">
+				<interceptor-ref name="topdev-action"/>
+				<interceptor-ref name="fileUploadStack"/>
+			</interceptor-stack>
+			<interceptor-stack name="topdevDefaultActionStack">
+				<interceptor-ref name="topdev-action"/>
+				<interceptor-ref name="basicStack"/>
+			</interceptor-stack>
+			<interceptor-stack name="topdevDefaultUploadActionStack">
+				<interceptor-ref name="topdev-action"/>
+				<interceptor-ref name="fileUploadStack"/>
+				<interceptor-ref name="basicStack"/>
+			</interceptor-stack>
+
+
+			<!-- Beginn neue zu verwendende Interceptors -->
+			<interceptor name="standard-interceptor"	class="com.topdev.aa.interceptor.StandardInterceptor"/>
+			<interceptor name="ajax-interceptor"		class="com.topdev.aa.interceptor.AjaxInterceptor"/>
+			<interceptor name="submodule-interceptor"	class="com.topdev.aa.interceptor.SubmoduleActionInterceptor"/>
+			<interceptor name="module-interceptor"		class="com.topdev.aa.interceptor.ModuleActionInterceptor"/>
+			<interceptor name="portlet-interceptor"		class="com.topdev.aa.interceptor.PortletActionInterceptor"/>
+
+			<interceptor-stack name="moduleStack">
+				<interceptor-ref name="basicStack"/>
+				<interceptor-ref name="standard-interceptor"/>
+				<interceptor-ref name="module-interceptor"/>
+			</interceptor-stack>
+
+			<interceptor-stack name="submoduleStack">
+				<interceptor-ref name="basicStack"/>
+				<interceptor-ref name="standard-interceptor"/>
+				<interceptor-ref name="submodule-interceptor"/>
+			</interceptor-stack>
+			
+			<interceptor-stack name="pseudoSubmoduleStack">
+				<interceptor-ref name="basicStack"/>
+				<interceptor-ref name="standard-interceptor"/>
+			</interceptor-stack>
+			
+			<interceptor-stack name="simpleStack">
+				<interceptor-ref name="basicStack"/>
+				<interceptor-ref name="standard-interceptor"/>
+			</interceptor-stack>
+			
+			<interceptor-stack name="simplePortletStack">
+				<interceptor-ref name="basicStack"/>
+				<interceptor-ref name="standard-interceptor"/>
+				<interceptor-ref name="portlet-interceptor"/>
+			</interceptor-stack>
+			
+			
+			<interceptor-stack name="ajaxStack">
+				<interceptor-ref name="basicStack"/>
+				<interceptor-ref name="standard-interceptor"/>
+				<interceptor-ref name="ajax-interceptor"/>
+			</interceptor-stack>
+			
+			<interceptor-stack name="ajaxUploadStack">
+				<interceptor-ref name="fileUpload"><param name="maximumSize">50000000</param></interceptor-ref>
+				<interceptor-ref name="basicStack"/>
+				<interceptor-ref name="standard-interceptor"/>
+				<interceptor-ref name="ajax-interceptor"/>
+			</interceptor-stack>
+			<!-- Ende neue zu verwendende Interceptors -->
+			
+		</interceptors>
+		<default-interceptor-ref name="topdevDefaultStack"/>
+
+        <global-results>
+            <result name="Exception">/pages/error/Exception.jsp</result>
+            <result name="SQLException">/pages/error/Exception.jsp</result>
+            <result name="SessionEndException">/pages/error/session-end-error.jsp</result>
+            <result name="error-div">/pages/error/error-div.jsp</result>
+            <result name="error"> /pages/lib/component/error.jsp</result>
+        </global-results>
+ 
+
+        <global-exception-mappings>
+            <exception-mapping exception="java.sql.SQLException" result="SQLException"/>
+            <exception-mapping exception="java.lang.Exception" result="Exception"/>
+        </global-exception-mappings>
+	</package>
+	
+	<include file="modules/portrait/businesspartner.xml" />
+	<include file="modules/portal_navigation.xml" />
+	<include file="modules/portrait/school_search.xml" />
+	<include file="modules/portrait/school_navigation.xml" />
+	<include file="modules/portrait/neuter_resources.xml" />
+	<include file="modules/portrait/personal_resources_statistic.xml" />
+	<include file="modules/portrait/media.xml" />
+	<include file="modules/portrait/working_group.xml" />
+	<include file="modules/portrait/pupil_magazine.xml" />
+	<include file="modules/portrait/personal_resources.xml" />
+	<include file="modules/portrait/cooperation.xml" />
+	<include file="modules/portrait/contributer.xml" />
+	<include file="modules/portrait/documents.xml" />
+	<include file="modules/portrait/learner_structure.xml" />
+	<include file="modules/portrait/school_evolution.xml" />
+	<include file="modules/portrait/activate_quality.xml" />
+	<include file="modules/portrait/school_life.xml" />
+	<include file="modules/portrait/school_intention.xml" />
+	<include file="modules/portrait/school_library.xml" />
+	<include file="modules/portrait/section_documents.xml" />
+	<include file="modules/portrait/school_image.xml" />
+	<include file="modules/portrait/schools_bychance.xml" />
+	<include file="modules/login.xml" />
+	<include file="modules/system.xml" />
+	<include file="modules/common/contact.xml" />
+	<include file="modules/medium/category.xml" />
+	<include file="modules/medium/logview.xml"/>
+	<include file="modules/medium/navigation.xml" />
+	<include file="modules/medium/result.xml" />
+	<include file="modules/medium/search.xml" />
+	<include file="modules/medium/result_newest.xml" />
+	<include file="modules/medium/result_favorite.xml" />
+	<include file="modules/medium/detail/overview.xml" />
+	<include file="modules/medium/detail/preview.xml" />
+	<include file="modules/medium/detail/links.xml" />
+	<include file="modules/medium/detail/files.xml" />
+	<include file="modules/common/image.xml" />
+
+
+	<package name="catalog" extends="struts-portlet-default" namespace="/catalog">
+		<action name="index" class="com.opensymphony.xwork2.ActionSupport">
+			<result name="success">/pages/catalog/view.jsp</result>
+		</action>
+	</package>
+
+	<package name="catalog-portlet_edit" extends="struts-portlet-default" namespace="/catalog/portlet_edit">
+		<action name="index" class="com.opensymphony.xwork2.ActionSupport">
+			<result name="success">/pages/catalog/portlet_edit/view.jsp</result>
+		</action>
+	</package>
+
+	<package name="catalog-portlet_help" extends="struts-portlet-default" namespace="/catalog/portlet_help">
+		<action name="index" class="com.opensymphony.xwork2.ActionSupport">
+			<result name="success">/pages/catalog/help/view.jsp</result>
+		</action>
+	</package>
+	
+
+</struts>

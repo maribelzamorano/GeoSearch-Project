@@ -1,0 +1,84 @@
+<c:choose>
+<c:when test="${anwf ne 'media'}">
+	<table class="topdev_hitlist" cellpadding="0" cellspacing="1">
+	<tr>
+		<th align="left">
+			Schulnummer
+		</th>
+		<th align="left">
+			Schulname
+		</th>
+		<th align="left">
+			Schulart
+		</th>
+		<th align="left">
+			PLZ	/ Ort
+		</th>
+		<th align="left">
+			Stra&szlig;e
+		</th>
+	</tr>
+	
+	<s:iterator value="rows" status="rowstatus">
+		<tr <s:if test="#rowstatus.odd == true">class="row_odd"</s:if>>
+	    	<td>
+				  <s:property value="SCHULNUMMER"/>
+			</td>
+			<td>
+				<a href="schools/overview?tspi=<s:property value="ID"/>">
+					<s:property value="SCHULNAME"/></a><br/>
+					<span style="font-size: 80%;"><s:property value="AENDERUNG"/></span>
+			</td>
+			<td>
+				  <s:property value="SCHULART"/>
+			</td>
+			<td>
+				  <s:property value="CC_PLZ_ORT"/>
+			</td>
+			<td>
+				  <s:property value="CC_STRASSE"/>
+			</td>		
+		</tr>
+	</s:iterator>
+	
+	</table>
+</c:when>
+<c:otherwise>
+	<table class="topdev_hitlist" cellpadding="0" cellspacing="1">
+	<tr>
+		<th align="left">
+			Nummer
+		</th>
+		<th align="left">
+			Medienzentrum
+		</th>
+		<th align="left">
+			PLZ	/ Ort
+		</th>
+		<th align="left">
+			Stra&szlig;e
+		</th>
+	</tr>
+	
+	<s:iterator value="rows" status="rowstatus">
+		<tr <s:if test="#rowstatus.odd == true">class="row_odd"</s:if>>
+	    	<td>
+				  <s:property value="SCHULNUMMER"/>
+			</td>
+			<td>
+				<a href="mediacenter/overview?tspi=<s:property value="ID"/>&tspm=media">
+					<s:property value="SCHULNAME"/>
+				</a>
+			</td>
+			<td>
+				  <s:property value="CC_PLZ_ORT"/>
+			</td>
+			<td>
+				  <s:property value="CC_STRASSE"/>
+			</td>
+		</tr>
+	</s:iterator>
+	
+	</table>
+</c:otherwise>
+</c:choose>

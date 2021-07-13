@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="school_library" extends="topdev-default" namespace="/school_library">
+		<interceptors>
+			<interceptor name="topdev-action" class="com.topdev.tsp.interceptor.ActionInterceptor"/>
+		</interceptors>
+
+		<action name="index" class="com.topdev.tsp.action.modules.school_library.DetailAction">
+			<result name="view">/pages/modules/school_library/view.jsp</result>
+			<result name="edit">/pages/modules/school_library/edit.jsp</result>
+			<result name="saved">/pages/lib/component/saved.jsp</result>
+		</action>
+		
+		<action name="view" class="com.topdev.tsp.action.modules.school_library.DetailAction" method="view">
+			<result name="view">/pages/modules/school_library/view.jsp</result>
+			<result name="edit">/pages/modules/school_library/edit.jsp</result>
+			<result name="saved">/pages/lib/component/saved.jsp</result>
+		</action>
+				
+<!-- Drucken_______________________________________________________________________________________________________________________________-->
+		<action name="print" class="com.topdev.tsp.action.modules.school_library.DetailAction" method="print">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+		</action>			
+		
+
+		<action name="manage-list_*" class="com.topdev.tsp.action.modules.school_library.submodules.ManageListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/school_library/submodules/list-library.jsp</result>
+		</action>
+		<action name="equipe-list_*" class="com.topdev.tsp.action.modules.school_library.submodules.EquipeListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/school_library/submodules/list-library.jsp</result>
+		</action>
+	</package>	
+
+</struts>

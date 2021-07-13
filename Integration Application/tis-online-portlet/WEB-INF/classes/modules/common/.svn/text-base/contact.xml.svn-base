@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="contact" extends="topdev-default" namespace="/contact">
+		<interceptors>
+			<interceptor name="topdev-action" class="com.topdev.tsp.interceptor.ActionInterceptor"/>
+		</interceptors>
+
+		<action name="index" class="com.topdev.tsp.action.modules.common.contact.DetailAction">
+			<result name="view">/pages/modules/common/contact/view.jsp</result>
+			<result name="edit">/pages/modules/common/contact/edit.jsp</result>
+			<result name="saved">/pages/modules/common/contact/saved.jsp</result>
+		</action>
+		
+		<action name="view" class="com.topdev.tsp.action.modules.common.contact.DetailAction" method="view">
+			<result name="view">/pages/modules/common/contact/view.jsp</result>
+			<result name="edit">/pages/modules/common/contact/edit.jsp</result>
+			<result name="saved">/pages/modules/common/contact/saved.jsp</result>
+		</action>	
+
+		<action name="edit" class="com.topdev.tsp.action.modules.common.contact.DetailAction" method="edit">
+			<result name="view">/pages/modules/common/contact/view.jsp</result>
+			<result name="edit">/pages/modules/common/contact/edit.jsp</result>
+			<result name="saved">/pages/modules/common/contact/saved.jsp</result>
+		</action>
+		
+		<action name="save" class="com.topdev.tsp.action.modules.common.contact.DetailAction" method="save">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="saved">/pages/lib/component/saved.jsp</result>
+		</action>	
+		
+		<action name="detail_*" class="com.topdev.tsp.action.modules.common.contact.DetailAction" method="{1}">
+			<result name="success">/pages/modules/common/contact/edit.jsp</result>
+		</action>
+
+		<action name="mail-detail_*" class="com.topdev.tsp.action.modules.common.contact.submodules.MailDetailAction" method="{1}">
+			<interceptor-ref name="topdevActionStack"/>
+			<result name="success">/pages/modules/common/contact/submodules/form-mail.jsp</result>
+			<result name="error">/pages/modules/common/contact/submodules/form-mail.jsp</result>
+			<result name="sended">/pages/lib/component/sended.jsp</result>
+		</action>
+<!-- 
+		<action name="sport-list_*" class="com.topdev.tsp.action.modules.common.contact.submodules.SportListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/common/contact/submodules/list-sport.jsp</result>
+		</action>
+		
+		<action name="sport-detail_*" class="com.topdev.tsp.action.modules.common.contact.submodules.SportDetailAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/common/contact/submodules/form-sport.jsp</result>
+			
+			<result name="list" type="chain">sport-list_edit</result>
+		</action>		
+		
+		<action name="cabinet-list_*" class="com.topdev.tsp.action.modules.common.contact.submodules.CabinetListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/common/contact/submodules/list-cabinet.jsp</result>
+		</action>
+		
+		<action name="cabinet-detail_*" class="com.topdev.tsp.action.modules.common.contact.submodules.CabinetDetailAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/common/contact/submodules/form-cabinet.jsp</result>		
+			<result name="list" type="chain">cabinet-list_edit</result>
+		</action>
+
+		<action name="schoolhouse-form" class="com.topdev.tsp.action.modules.common.contact.submodules.SchoohouseFormAction">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/common/contact/submodules/form-schoolhouse.jsp</result>
+		</action>
+		
+		<action name="handicap-list_*" class="com.topdev.tsp.action.modules.common.contact.submodules.HandicapListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/common/contact/submodules/list-handicap.jsp</result>
+		</action>
+		<action name="handicap-detail_*" class="com.topdev.tsp.action.modules.common.contact.submodules.HandicapDetailAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/common/contact/submodules/form-handicap.jsp</result>
+			<result name="list" type="chain">handicap-list_edit</result>
+		</action>		
+ -->
+	</package>
+</struts>

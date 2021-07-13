@@ -1,0 +1,21 @@
+/*
+	--- wichtiger Hinweis ---
+	
+	In dieser Datei sind nur Elemente zulässig,	die mit dem Prefix "div.topdev_portlet" 
+	adressiert wurden. Beispiel:
+	 
+	"div.topdev_portlet table.topdev_spacedList td"
+	Ist zu verwenden um TD-Elemente einer Tabelle der Klasse "topdev_spacedList"
+	innerhalb eines divs der Klasse	"topdev_portlet" zu adressieren.
+	
+	Außerdem ist das jeweilige Unterobjekt via Kommentar über einen Block anzugeben.
+*/
+@charset "utf-8";
+
+
+/*_____ topdev_spacedList _____*/
+
+div.topdev_portlet table.topdev_spacedList td
+{
+	padding-bottom: 7px;
+}

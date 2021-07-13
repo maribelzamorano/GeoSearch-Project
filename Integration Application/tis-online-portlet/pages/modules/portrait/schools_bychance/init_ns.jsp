@@ -1,0 +1,1 @@
+<% request.setAttribute("ns", "portrait_schools_bychance"); %>

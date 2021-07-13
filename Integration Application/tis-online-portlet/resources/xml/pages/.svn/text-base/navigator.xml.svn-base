@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<navigator>
+	<logo src="/images/ci/logo.gif" visible="true"/>
+	<search visible="true"/>
+	<login
+		href="/user-login-cas"
+		href_forgotpassword="/user-face-forgotpassword.do"
+		href_newuser="/businesspartner-face-detail.do"
+		registration="true"
+		visible="true"/>
+	<menu>
+ 		<submenu 		id="zugang_portal" 					label="Persönlicher Bereich"	link="/portal-face-detail.do">
+			<submenu 	id="zugang_portal_daten" 			label="Meine Daten" 			link="/businesspartner-face-detail.do"/>  
+			<submenu 	id="zugang_portal_anmeldungen" 		label="Meine Anmeldungen" 		link="/portal-registrations-face-detail.do"/>
+			<submenu 	id="zugang_portal_einstellungen" 	label="Meine Einstellungen" 	link="/config-face-detail.do"/>
+			<submenu 	id="zugang_portal_vormerkungen" 	label="Meine Vormerkungen" 		link="/portal-observation-face-detail.do"/>
+			<submenu 	id="zugang_portal_profil" 			label="Mein Katalog" 			link="/portal-profile-face-detail.do"/>
+			<submenu 	id="zugang_portal_post" 			label="Meine Post" 				link="/messages/face-detail.do"/>
+			<submenu 	id="zugang_downloads" 				label="Downloads" 				link="/downloads-face-search.do"/>	
+			<submenu 	id="zugang_hilfe" 					label="Hilfe" 					link="/navigator_zugang.help"/>
+		</submenu>
+
+		<submenu 		id="zugang_standderabrechnung" 		label="Stand der Abrechnung"	link="/bucd-face-search.do">
+			<submenu 	id="zugang_standderabrechnung_hilfe" label="Hilfe" 					link="/navigator_standderabrechnung.help"/>
+		</submenu>
+
+
+		<submenu 		id="zugang_budgetierung_einrichten" label="Budgetierung einrichten"	link="/budgeting-face-register.do">
+			<submenu 	id="zugang_budgetierung_hilfe" 		label="Hilfe" 					link="/navigator_budgetierung.help"/>
+		</submenu>		
+		<submenu 		id="zugang_budgetierung" 			label="Budgetierung"			link="/budgeting-face-search.do">
+			<submenu 	id="zugang_budgetierung_hilfe" 		label="Hilfe" 					link="/navigator_budgetierung.help"/>
+		</submenu>
+		
+		<submenu		id="vesg_planen"		label="Veranstaltungen planen"				link="/vesg/metaplan.do">
+			<submenu	id="massnahme"			label="Maßnahmen bearbeiten"				link="/pgpk/face-search.do"/>
+<!-- 		<submenu	id="vesg_genehmigen"	label="Veranstaltung genehmigen"			link="/vesg/allow-face-search.do"/> -->
+			<submenu	id="massnahme_hilfe"	label="Hilfe"								link="/navigator_pgpk.help"/>
+		</submenu>
+
+		<submenu		id="vesg_verwalten"			label="Veranstaltungen verwalten" 		link="/vesg/metamanage.do">
+			<submenu	id="vesg_bearbeiten"		label="Veranstaltungen bearbeiten" 		link="/vesg/face-search.do?ANWF_SHORTNAME=VESG"/>
+			<submenu	id="vesg_beauftragen"		label="Veranstaltungen beauftragen" 	link="/vesg/instruct-face-search.do"/>
+			<submenu	id="anmeldungen_bearbeiten"	label="Anmeldungen bearbeiten" 			link="/registrations/face-search.do"/>
+			<submenu	id="vesg_vorbereiten"		label="Veranstaltungen vorbereiten" 	link="/vesg/prepare-face-search.do"/>
+			<submenu	id="vesg_durchfuehren"		label="Veranstaltungen durchführen" 	link="/vesg/perform-face-search.do"/>
+			<submenu	id="vesg_nachbereiten"		label="Veranstaltungen nachbereiten"	link="/vesg/reinforce-face-search.do"/>
+			<submenu	id="vesg_hilfe"				label="Hilfe"							link="/navigator_vesg_metamanage.help"/>
+		</submenu>
+		
+		<submenu		id="katalog"			label="Veranstaltungskatalog"			link="/catalog-face-search.do">
+			<submenu	id="katalog_hilfe"		label="Hilfe"							link="/navigator_catalog.help"/>
+		</submenu>	
+		
+		<submenu 		id="publikationen" 					label="Medien" 					link="/publication-face-search.do">
+			<submenu 	id="publikationen_oeffnungszeiten" 	label="Öffnungszeiten" 			link="/publication-oeff.do"/>
+			<submenu 	id="publikationen_nutzerordnung" 	label="Nutzerordnung" 			link="/publication-nutz.do"/>
+			<submenu 	id="publikationen_hilfe" 			label="Hilfe" 					link="/navigator_publication.help"/>
+		</submenu>
+		
+		<submenu 		id="katalog_bedarfsmeldungen" 	label="Bedarfsmeldungen" 	link="/beda-face-search.do">
+			<submenu 	id="katalog_hilfe" 				label="Hilfe" 				link="/navigator_beda.help"/>
+			
+		</submenu>
+		
+		<submenu	 id="reda" 			label="Dozenten und Experten" 	link="/doza-face-search.do">
+			<submenu id="reda_hilfe" 	label="Hilfe" 					link="/navigator_doza.help"/>
+		</submenu>
+		
+		<submenu 	 id="stammdaten" 					label="Systempflege" 				link="/masterdata-meta.do">
+			<submenu id="stammdaten_mandanten" 			label="Anbieter verwalten"			link="/masterdata-mand-face-search.do"/>
+			<submenu id="stammdaten_benutzergruppen" 	label="Benutzergruppen verwalten" 	link="/masterdata-grup-face-search.do"/>
+			<submenu id="stammdaten_kostenstellen" 		label="Kostenstellen verwalten" 	link="/masterdata-kost-face-search.do"/>
+			<submenu id="system_kennwoerter" 			label="Kennwörter zurücksetzen" 	link="/system-geli-face-search.do"/>
+			<submenu id="system_mitteilungen" 			label="Mitteilungen verwalten" 		link="/system-mitt-face-search.do"/>
+			<submenu id="stammdaten_hilfe" 				label="Hilfe" 						link="/navigator_masterdata.help"/>
+		</submenu>
+		
+		<submenu id="konfiguration" 		label="Konfiguration" 							link="/config-face-detail.do"/>
+		<submenu id="datenschutzhinweise" 	label="Datenschutzhinweise" 					link="/datasecurity.do"/>
+		<submenu id="impressum" 			label="Impressum" 								link="/impressum.do"/>
+		<submenu id="faq" 					label="FAQ-Häufig gestellte Fragen" 			link="/faq.help"/>
+	
+	</menu>
+	<footer>
+		<line>Das FortbildungsNetz</line>
+		<line>wird präsentiert auf dem</line>
+		<line>
+			<link url="http://www.bildung-brandenburg.de">
+				Brandenburgischen Bildungsserver.
+			</link>
+		</line>
+		<line>Dieser ist ein Service des</line>
+		<line>
+			<link url="http://www.lisum.brandenburg.de">
+				Landesinstitut für Schule und Medien Brandenburg
+			</link>
+		</line>
+		<line>Struveweg 1</line>
+		<line>14974 Ludwigsfelde</line>
+		<line>Tel.: +49 (3378) 209 0</line>
+		<line>Fax: +49 (3378) 209 198</line>
+		<line>Fax: +49 (36458) 56 125</line>
+		<line/>
+		<line><image url="images/ci/line.gif"/></line>
+	</footer>
+</navigator>

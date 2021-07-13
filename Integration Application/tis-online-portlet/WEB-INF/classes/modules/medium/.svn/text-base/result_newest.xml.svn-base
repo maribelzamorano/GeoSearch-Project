@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="medium_result_newest" extends="topdev-default" namespace="/medium_result_newest">
+		<action name="view" class="com.topdev.tsp.action.modules.medium.result_newest.ViewAction" method="view">
+			<interceptor-ref name="simpleStack"/>
+			<result name="success">/pages/modules/medium/result_newest/view.jsp</result>
+		</action>
+
+		<action name="detail" class="com.topdev.tsp.action.modules.medium.result_newest.DetailAction" method="view">
+			<interceptor-ref name="ajaxStack"/>
+			<result name="success">/pages/modules/medium/result_newest/detail.jsp</result>
+		</action>
+		
+		<action name="print" class="com.topdev.tsp.action.modules.medium.result_newest.DetailAction" method="print">
+			<interceptor-ref name="ajaxStack"/>
+		</action>	
+	</package>
+</struts>

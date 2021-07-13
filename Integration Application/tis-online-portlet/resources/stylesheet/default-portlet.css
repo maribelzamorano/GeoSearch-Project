@@ -1,0 +1,363 @@
+/*
+	--- wichtiger Hinweis ---
+	
+	Alle Klassennamen haben mit "topdev_" zu beginnen.
+	Ausserdem sollten keine globalen Adressierungen wie "td.topdev_test"
+	gemacht werden sondern stehts mit einen überliegenden schachtelnden Element
+	adressiert werden (siehe hierzu Datei "include/topdev_portlet.css") 
+*/
+@charset "utf-8";
+@import "default-portal.css";  /* Sollte über Kurz oder lang aufgelöst werden... */
+@import "include/topdev_portlet.css";
+@import "include/topdev_tag.css";
+
+div.listrow_deleted_div
+{
+	text-decoration: line-through;
+}
+
+td.error
+{
+	color:	red;
+}
+font.topdev_zusatzinfo
+{
+	color:#888;
+}
+
+font.topdev_zusatzinfo_type
+{
+	color:		#000;
+	font-size:	8pt;
+}
+
+table.topdev_tickets td
+{
+	background-color:	#FFF;
+	border-bottom:		1px solid #CEDFE9;
+	border-top:			1px solid #CEDFE9;
+	padding:			7px;
+	padding-right:		3px;
+	vertical-align:		top;
+}
+
+table.topdev_tickets td a
+{
+	font-weight:	bold;
+}
+
+img.topdev_media_result
+{
+	float:			left;
+	margin-right:	6px;
+	margin-left:	-7px;
+	height:			60px;
+	width:			80px;
+	border-right:	3px #CEDFE9 solid;
+
+}
+
+img.multiselect
+{
+	margin-left:2px;
+	margin-top:1px;
+	height:20px;
+	width:20px;
+	background-image:url(../../images/design/dropdown.gif);
+}
+*:not(hr) img.multiselect
+{
+	margin-left:0px;
+	margin-top:0px;
+}
+/* ______________________  Bilder  ________________________________________________*/
+img.KZ_STATUS, img.KZ_ABSAGEN, img.KZ_ANLAGEN, img.KZ_EDIT, img.KZ_DELETE, img.KZ_SAVE, img.KZ_ABORT
+{
+	background-position:center;
+	background-repeat:no-repeat;
+	cursor:hand;
+	width:15px; 
+	height:17px; 
+	border-width:0; 
+	margin-right:3px;
+}
+
+img.KZ_ABSAGEN	{	background-image:url(../../images/icons/list/revoke.gif);		}
+img.KZ_STATUS	{	background-image:url(../../images/icons/list/status.gif);		}
+img.KZ_ANLAGEN	{	background-image:url(../../images/icons/list/attachment.gif);	}
+img.KZ_EDIT		{	background-image:url(../../images/icons/list/edit.gif);			}
+img.KZ_DELETE	{	background-image:url(../../images/icons/list/delete.gif); }
+img.KZ_DOWNLOAD	{	background-image:url(../../images/icons/list/download.gif);		}
+img.KZ_SAVE		{	background-image:url(../../images/icons/list/download_save.gif);		}
+img.KZ_ABORT	{	background-image:url(../../images/icons/list/undo.gif);		}
+
+
+img.checkbox
+{
+	margin-left:  5px;
+	border: 1px solid #d0d0d9;
+}
+
+/* ______________________  Icons  ________________________________________________*/
+
+ul.topdev_link_intern li.topdev_icon_mail
+{
+	list-style-image:url(../../images/icons/portlet/mail.gif);
+}
+ul.topdev_link_intern li.topdev_icon_intern
+{
+	list-style-image:	url(../../images/icons/portlet/link_intern_heigher.gif);
+}
+ul.topdev_link_intern li.topdev_icon_extern
+{
+	list-style-image:url(../../images/icons/portlet/link_extern_heigher.gif);
+}
+ul.topdev_link_intern li.topdev_icon_register
+{
+	list-style-image:url(../../images/icons/portlet/register.gif);
+}
+h4.topdev_link_menu 
+{
+	color:#408CB3;
+
+}
+ul.topdev_link_menu li a
+{
+	color:black;
+
+}
+ul.topdev_link_menu li font.topdev_active
+{
+	color:#CC0000;
+}
+
+/* ______________________  Links  ________________________________________________*/
+a
+{ 
+
+}
+a.checkbox	{	margin-left:  5px; }
+
+
+a:link 		{}
+a:active	{}
+a:visited	{}
+a.disabled
+{ 
+	color:gray; 
+	cursor:default;
+}
+a.xf
+{
+	width:5px;
+	font-size:11px;
+	color:black;
+	font-weight:bolder;
+}
+
+
+
+/* ______________________  Tabellen  ________________________________________________*/
+table.hitlist
+{
+
+	border-width:		0px;
+}
+table.hitlist td.list1
+{
+	vertical-align:		top;
+	border-left:		1px solid #cccccc;
+
+}
+table.hitlist td.list2
+{
+	vertical-align:		top;
+	border-left:		1px solid #cccccc;
+	background-color:	#e0e0e0;
+}
+table.hitlist td.heading
+{
+	vertical-align:		top;
+	padding-top:		5px;
+
+
+/*	font-weight:		bolder;*/
+}
+table.hitlist td.heading_bold
+{
+	vertical-align:		top;
+	padding-top:		5px;
+	border-left:		1px solid #cccccc;
+	background-color:	#eeeeee;
+	font-weight:		bolder;
+}
+table.hitlist td.icons
+{
+	vertical-align:		top;
+	font-weight:		bolder;
+}
+table.hitlist tr.deleted
+{
+	text-decoration:	line-through;
+}
+
+table.form tr td.label
+{
+	padding-left:		10px;
+	white-space:		nowrap;
+}
+table.form tr td.field
+{
+	padding-left:		10px;
+	white-space:		nowrap;
+}
+
+/* ______________________  Eingabefelder  ________________________________________________*/
+input.readonly
+{
+	background-color:#EFEFEF; 
+	font-size:			12px;
+	font-family:		arial,helvetica,sans-serif;
+	font-weight:		normal;
+	text-decoration:	none;
+}
+
+textarea.readonly
+{
+	background-color:#EFEFEF; 
+	font-size:			12px;
+	font-family:		arial,helvetica,sans-serif;
+	font-weight:		normal;
+	text-decoration:	none;
+}
+
+/* ______________________  Ebenen  ________________________________________________*/
+
+
+
+
+/* ______________________  foldbox  ________________________________________________*/
+div.topdev_tabbox
+{
+	padding-bottom:	10px;
+}
+div.topdev_tabbox td.tab_active
+{
+	padding:			4px;
+	padding-right:		7px;
+	padding-bottom:		5px;
+	border-top:			1px solid #AAA;
+	border-right:		1px solid #AAA;
+	border-left:		1px solid #AAA;
+	border-bottom:		1px solid #FFF;
+	white-space:		nowrap;
+	background-color:	#FFF;
+}
+div.topdev_tabbox td.tab_active a
+{
+	color:			black;
+	
+}
+div.topdev_tabbox td.tab_inactive
+{
+	padding:		4px;
+	padding-right:	7px;
+	padding-bottom:	5px;
+	border-top:		1px solid #AAA;
+	border-right:	1px solid #AAA;
+	border-bottom:	1px solid #ABB;
+	border-left:	1px solid #AAA;
+	background-color:#EFEFEF;
+	white-space:	nowrap;
+	color:			#888888;
+}
+div.topdev_tabbox td.tab_inactive a
+{
+
+	color:			#888888;
+}
+div.topdev_tabbox td.tab_pusher1
+{
+	width:			3px;
+	padding-left:	2px;
+	padding-right:	2px;
+	border-bottom:	1px solid #AAAAAA;
+}
+div.topdev_tabbox td.tab_pusher2
+{
+	border-bottom:	1px solid #AAAAAA;
+}
+
+
+div.topdev_tabbox td.nav_active
+{
+	padding-right:	5px;
+	white-space:	nowrap;
+	
+}
+div.topdev_tabbox td.nav_inactive
+{
+	padding-right:	5px;
+	white-space:	nowrap;
+	
+}
+
+div.topdev_tabbox td.nav_active a
+{
+	font-weight:	bolder;
+	color:			black;
+}
+div.topdev_tabbox td.body_active
+{
+	border-top:	1px solid #AAAAAA;
+	
+}
+
+div.topdev_tabbox td.body
+{
+	padding-left:	10px;
+	padding-top:	10px;
+}
+
+div.divX
+{
+	width:			10px;
+	padding-right:	3px;
+	display:		none;
+	font-weight:	bolder;
+}
+/* ______________________  Sonstiges  ________________________________________________*/
+
+iframe
+{
+	border:1px solid #d0d0d9;
+}
+
+legend.label
+{
+	font-size:			12px;
+	font-family:		arial,helvetica,sans-serif;
+	font-weight:		normal;
+	text-decoration:	none;
+	background-color:	#eeeeee;
+	padding-left:		3px;
+	padding-right:		3px;
+	padding-top:		0px;
+	padding-bottom:		0px;
+	height:				22;
+	text-align:			left;
+	white-space:		nowrap;
+}
+
+legend
+{
+	font-size:		14px;
+	font-style:		italic;
+	font-family:	arial,helvetica,sans-serif;
+	white-space:	nowrap;
+	color:			black;
+}
+
+
+
+

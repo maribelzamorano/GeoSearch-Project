@@ -1,0 +1,138 @@
+img.KZ_STATUS, img.KZ_ABSAGEN, img.KZ_ANLAGEN
+{
+	background-position:center;
+	background-repeat:no-repeat;
+	cursor:hand;
+	width:14px; 
+	height:17px; 
+	border-width:0; 
+}
+
+img.KZ_ABSAGEN	{	background-image:url(../../images/icons/list/revoke.gif);		}
+img.KZ_STATUS	{	background-image:url(../../images/icons/list/status.gif);		}
+img.KZ_ANLAGEN	{	background-image:url(../../images/icons/list/attachment.gif);	}
+img.KZ_EDIT		{	background-image:url(../../images/icons/list/edit.gif);			}
+img.KZ_DELETE	{	background-image:url(../../images/icons/list/delete.gif) ;		}
+img.KZ_DOWNLOAD	{	background-image:url(../../images/icons/list/download.gif);		}
+
+
+a
+{ 
+	color:#0000ee; 
+	font-size:			12px;
+	font-style:			none;
+	font-family:		helvetica;
+	font-weight:		normal;
+	text-decoration:	none;
+	margin-top:0px;
+	margin-bottom:0px;
+	margin-right:0px;
+}
+
+
+a:link 		{}
+a:active	{}
+a:visited	{}
+a.disabled
+{ 
+	color:gray; 
+	cursor:default;
+}
+
+body
+{
+	padding-left:0px;
+	padding-right:0px;
+	padding-top:0px;
+	padding-bottom:0px;
+	margin-left:0px;
+	margin-right:0px;
+	margin-top:0px;
+	margin-bottom:0px;
+	font-size:			12px;
+	font-style:			none;
+	font-family:		helvetica;
+	font-weight:		normal;
+	text-decoration:	none;
+	background-color:#ffffff;	
+	scrollbar-arrow-color: #000000;
+	scrollbar-base-color: #FFFFFF;
+	scrollbar-track-color: #ffffff;
+	scrollbar-face-color: #eeeeee;
+	scrollbar-highlight-color: #d0d0d9;
+	scrollbar-3dlight-color: #d0d0d9;
+	scrollbar-darkshadow-color: #eeeeee;
+	scrollbar-shadow-color: #d0d0d9;	
+}
+
+
+
+table
+{
+	border-width:0px;
+	border-style:solid;
+	border-color:black;
+}
+
+
+th
+{
+	font-size:			12px;
+	font-style:			none;
+	font-family:		helvetica;
+	font-weight:		bolder;
+	text-decoration:	underline;
+}
+
+
+td
+{
+	font-size:			12px;
+	font-style:			none;
+	font-family:		helvetica;
+	font-weight:		normal;
+	text-decoration:	none;
+	background-color:#eeeeee;
+	vertical-align: top;
+}
+
+
+td.link
+{
+	font-size:			12px;
+	font-style:			none;
+	font-family:		helvetica;
+	font-weight:		normal;
+	text-decoration:	none;
+	background-color:#eeeeee;
+	vertical-align: top;
+	cursor:hand;
+	color:blue;
+}
+
+
+td.head
+{
+	font-size:			12px;
+	font-style:			none;
+	font-family:		helvetica;
+	font-weight:		bolder;
+	text-decoration:	none;
+	background-color:#ffffff;
+}
+
+input.commandButton
+{
+	background-position:center;
+	background-repeat:no-repeat;
+	cursor:hand;
+	background-color:#eeeeee; 
+	border-color:#d0d0d9; 
+	width:82px; 
+	border-width:0; 
+	border-style:solid;
+	font-size:			12px;
+	font-style:			none;
+	font-family:		helvetica;
+}
+

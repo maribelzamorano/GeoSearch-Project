@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="school_life" extends="topdev-default" namespace="/school_life">
+		<interceptors>
+			<interceptor name="topdev-action" class="com.topdev.tsp.interceptor.ActionInterceptor"/>
+		</interceptors>
+		<action name="index" class="com.topdev.tsp.action.modules.school_life.DetailAction">
+			<result name="view">/pages/modules/school_life/view.jsp</result>
+			<result name="edit">/pages/modules/school_life/edit.jsp</result>
+			<result name="saved">/pages/modules/school_life/saved.jsp</result>
+		</action>
+		
+		<action name="view" class="com.topdev.tsp.action.modules.school_life.DetailAction" method="view">
+			<result name="view">/pages/modules/school_life/view.jsp</result>
+			<result name="edit">/pages/modules/school_life/edit.jsp</result>
+			<result name="saved">/pages/modules/school_life/saved.jsp</result>
+		</action>	
+
+		<action name="edit" class="com.topdev.tsp.action.modules.school_life.DetailAction" method="edit">
+			<result name="view">/pages/modules/school_life/view.jsp</result>
+			<result name="edit">/pages/modules/school_life/edit.jsp</result>
+			<result name="saved">/pages/modules/school_life/saved.jsp</result>
+		</action>
+			
+		<action name="save" class="com.topdev.tsp.action.modules.school_life.DetailAction" method="save">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="saved">/pages/lib/component/saved.jsp</result>
+		</action>		
+
+<!-- Drucken_______________________________________________________________________________________________________________________________-->
+		<action name="print" class="com.topdev.tsp.action.modules.school_life.DetailAction" method="print">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+		</action>				
+		
+<!-- Wettbewerbe __________________________________________________________________________________________________________________________-->
+		<action name="contest-list_*" class="com.topdev.tsp.action.modules.school_life.submodules.ContestListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/school_life/submodules/list-contest.jsp</result>
+		</action>
+
+		<action name="contest-detail_*" class="com.topdev.tsp.action.modules.school_life.submodules.ContestDetailAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/school_life/submodules/form-contest.jsp</result>
+			<result name="saved">/pages/lib/component/saved-inline.jsp</result>
+			<result name="list" type="chain">contest-list_edit</result>
+		</action>
+		
+<!-- Förderangebote __________________________________________________________________________________________________________________________-->
+		<action name="offer-list_*" class="com.topdev.tsp.action.modules.school_life.submodules.OfferListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/school_life/submodules/list-offer.jsp</result>
+		</action>
+
+		<action name="offer-detail_*" class="com.topdev.tsp.action.modules.school_life.submodules.OfferDetailAction" method="{1}">
+			<interceptor-ref name="topdevActionStack"/>
+			<result name="success">/pages/modules/school_life/submodules/form-offer.jsp</result>
+			<result name="saved">/pages/lib/component/saved-inline.jsp</result>
+			<result name="list" type="chain">offer-list_edit</result>
+		</action>
+		
+<!-- Projekte __________________________________________________________________________________________________________________________-->
+		<action name="project-list_*" class="com.topdev.tsp.action.modules.school_life.submodules.ProjectListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/school_life/submodules/list-project.jsp</result>
+		</action>
+
+		<action name="project-detail_*" class="com.topdev.tsp.action.modules.school_life.submodules.ProjectDetailAction" method="{1}">
+				<interceptor-ref name="topdevActionStack"/>
+			<result name="success">/pages/modules/school_life/submodules/form-project.jsp</result>
+			<result name="saved">/pages/lib/component/saved-inline.jsp</result>
+			<result name="list" type="chain">project-list_edit</result>
+		</action>
+
+<!-- Traditionen __________________________________________________________________________________________________________________________-->
+		<action name="tradition-list_*" class="com.topdev.tsp.action.modules.school_life.submodules.TraditionListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/school_life/submodules/list-tradition.jsp</result>
+		</action>
+
+		<action name="tradition-detail_*" class="com.topdev.tsp.action.modules.school_life.submodules.TraditionDetailAction" method="{1}">
+				<interceptor-ref name="topdevActionStack"/>
+			<result name="success">/pages/modules/school_life/submodules/form-tradition.jsp</result>
+			<result name="saved">/pages/lib/component/saved-inline.jsp</result>
+			<result name="list" type="chain">tradition-list_edit</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="learner_structure" extends="topdev-default" namespace="/learner_structure">
+		<interceptors>
+			<interceptor name="topdev-action" class="com.topdev.tsp.interceptor.ActionInterceptor"/>
+		</interceptors>
+		
+		<action name="index" class="com.topdev.tsp.action.modules.learner_structure.DetailAction">
+			<result name="view">/pages/modules/learner_structure/view.jsp</result>
+			<result name="edit">/pages/modules/learner_structure/edit.jsp</result>
+			<result name="saved">/pages/lib/component/saved.jsp</result>
+		</action>
+		
+		<action name="view" class="com.topdev.tsp.action.modules.learner_structure.DetailAction" method="view">
+			<result name="view">/pages/modules/learner_structure/view.jsp</result>
+			<result name="edit">/pages/modules/learner_structure/edit.jsp</result>
+			<result name="saved">/pages/lib/component/saved.jsp</result>
+		</action>	
+<!-- Drucken_________________________________________________________________________________________________________________________________-->
+		<action name="print" class="com.topdev.tsp.action.modules.learner_structure.DetailAction" method="print">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+		</action>
+		<action name="learner-list_*" class="com.topdev.tsp.action.modules.learner_structure.submodules.LearnerListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/learner_structure/list-learner.jsp</result>
+		</action>
+	</package>
+</struts>

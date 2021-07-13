@@ -1,0 +1,50 @@
+/*
+	--- wichtiger Hinweis ---
+	
+	In dieser Datei sind nur Elemente zulässig,	die mit dem Prefix ".topdev_tag_..." 
+	adressiert wurden. Beispiel:
+	 
+	"div.topdev_tag_pagebar a"
+	Ist zu verwenden um a-Elemente 
+	innerhalb eines divs der Klasse	"topdev_tag_pagebar" zu adressieren.
+	Der jeweilige Tag muss dann ein entprechendes div-Element um sich schachteln.
+	
+	Elemente denen gleiche Werte zugewiesen werden, sind zusammen mit Kommatas getrennt zu 
+	adressieren. (Siehe hierzu "topdev_tag_pagebar" weiter unten) 
+	Außerdem ist das jeweilige Unterobjekt via Kommentar über einen Block anzugeben.
+*/
+@charset "utf-8";
+
+
+/*_____ topdev_tag_pagebar _____*/
+
+div.topdev_tag_pagebar a.topdev_tag_pagebar_dblBack_disabled,
+div.topdev_tag_pagebar a.topdev_tag_pagebar_back_disabled,
+div.topdev_tag_pagebar a.topdev_tag_pagebar_dblForward_disabled,
+div.topdev_tag_pagebar a.topdev_tag_pagebar_forward_disabled
+{
+	color:			#aaaaaa;
+	font-weight:	bolder;
+}
+
+div.topdev_tag_pagebar a.topdev_tag_pagebar_dblBack,
+div.topdev_tag_pagebar a.topdev_tag_pagebar_back,
+div.topdev_tag_pagebar a.topdev_tag_pagebar_dblForward,
+div.topdev_tag_pagebar a.topdev_tag_pagebar_forward
+{
+	font-weight:	bolder;
+}
+
+
+div.topdev_tag_pagebar a.topdev_tag_pagebar_goToCurrentPage
+{
+	color:			black;
+	font-weight:	bolder;
+}
+div.topdev_tag_pagebar a.topdev_tag_pagebar_goToOtherPage { color: black; }
+
+div.topdev_tag_pagebar td.topdev_tag_pagebar_resultInfo
+{
+	color:			#777777;
+	padding-top:	4px;
+}

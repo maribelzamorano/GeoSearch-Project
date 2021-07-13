@@ -1,0 +1,174 @@
+<project name="TIS-Online" default="dev" basedir=".">
+
+
+<!-- Beginn primäre Konfiguration -->
+	<description>TIS-Online</description>
+    <property name="project.SPRA_CODE"	value="D"/>
+    <property name="project.PROJ_CODE"	value="TSP"/>
+    <property name="project.version"	value="2.0"/>
+	<property name="project.title"		value="Tis-Online"/>
+    <property name="project.distname"	value="tsp"/>
+	<property name="project.folder"		value="tis-online-portlet"/>
+    <property name="project.path"		value="C:\Programme\Tomcat_5.5\${project.folder}"/>
+	<property name="os"      			value="windows"/>
+	<property name="url"				value="http://127.0.0.1/manager"/>
+	<property name="username"			value="admin"/>
+	<property name="password"			value=""/>
+<!-- Ende primäre Konfiguration -->
+	
+	
+
+	<property name="dist"				location="../../WEB-INF"/>
+	<property name="src"				location="src"/>
+	<property name="src-aa"				location="src-aa"/>
+	<property name="bin"				location="bin"/>
+	<property name="bin-aa"				location="bin-aa"/>
+	
+	<property name="lib"	location="lib"/>
+	<property name="lib-run" location="../lib"/>
+	<property name="path"	value="/${project.folder}"/>
+
+	<path id="msg.classpath">
+		<pathelement path="./"/>
+		<pathelement path="${lib-run}/jtds-1.1.jar"/>
+		<pathelement path="${lib-run}/topdev-portlet.jar"/>
+	</path>
+	<path id="compile.classpath">
+		<pathelement path="${bin}/"/>
+		<pathelement path="${bin-aa}/"/>
+
+		<fileset dir="${lib-run}">
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="../../../ROOT/WEB-INF/lib">
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="../../../../common/lib/ext">
+			<include name="**/*.jar"/>
+		</fileset>
+		<fileset dir="../../../../common/lib">
+			<include name="**/*.jar"/>
+		</fileset>
+	</path>
+
+<!-- targets... -->
+<!--___________________________________________________________________________________________________________________-->
+	<target name="reload" description="web application wird neugeladen..">	<reload url="${url}" username="${username}" password="${password}" path="${path}"/>	</target>
+<!--___________________________________________________________________________________________________________________-->
+	<target name="stop" description="web application wird gestoppt..">		<stop url="${url}" username="${username}" password="${password}" path="${path}"/>	</target>
+<!--___________________________________________________________________________________________________________________-->
+	<target name="start" description="web application wird gestartet..">	<start url="${url}" username="${username}" password="${password}" path="${path}"/>	</target>
+<!--___________________________________________________________________________________________________________________-->
+	<target name="init">
+		<tstamp>
+			<format property="TODAY_UK" pattern="d-MMMM-yyyy" locale="en"/>
+			<format property="jetzt" pattern="EEEE : MM.dd.yyyy hh:mm:ss" locale="de"/>
+			<format property="now" pattern="yyyyMMdd-hhmmss" locale="de"/>
+		</tstamp>
+		<mkdir dir="${bin}"/>
+		<mkdir dir="${bin-aa}"/>
+	</target>
+<!--___________________________________________________________________________________________________________________-->
+	<target name="clean" description="Clean up">
+		<delete dir="bin"/>
+		<mkdir  dir="bin"/>
+		<delete dir="bin-aa"/>
+		<mkdir  dir="bin-aa"/>
+		<delete dir="bin-portal-addon"/>
+		<mkdir  dir="bin-portal-addon"/>
+	</target>
+<!--___________________________________________________________________________________________________________________-->
+	<target name="copy">
+  	      <copy todir="bin" includeEmptyDirs="no">
+ 	           <fileset dir="src">
+ 	           <patternset>
+ 	               <include name="**/*.conf"/>
+ 	               <include name="**/*.properties"/>
+ 	               <include name="**/*.xml"/>
+ 	           </patternset>
+ 	           </fileset>
+ 	       </copy>
+ 	   </target>
+<!--___________________________________________________________________________________________________________________-->
+	<target name="javadoc" description="Generate JavaDoc API docs" depends="init">
+		<delete dir="../../api"/>
+		<mkdir dir="../../api"/>
+		<javadoc sourcepath="./src"
+			destdir="../../api"
+			classpath="${servlet.jar}:${jdbc20ext.jar}"
+			packagenames="*"
+			author="true"
+			private="true"
+			version="true"
+			windowtitle="${project.title} API Documentation vom: ${jetzt}"
+			doctitle="&lt;font style=helvetica size=2&gt;${jetzt}&lt;/font&gt;   &lt;br&gt;&lt;h3&gt;${project.title} Documentation &lt;/h3&gt;"
+			bottom="Copyright &#169; 2003 TopDev GmbH">
+			<classpath refid="compile.classpath"/>
+		</javadoc>
+	</target>
+<!--___________________________________________________________________________________________________________________-->
+	<target name="msg" description="Abrufen der Messages">
+	 	<java classname="com.topdev.aa.lib.MakeMessageFiles">
+	    	<arg value="../classes/messages"/>
+			<arg value="${project.SPRA_CODE}"/>
+			<arg value="${project.PROJ_CODE}"/>
+	 		<classpath refid="msg.classpath"/>
+    	</java>
+	</target>
+<!--___________________________________________________________________________________________________________________-->
+	<target name="compile" depends="compile-aa" description="Compile..." >
+		<javac srcdir="${src}" destdir="${bin}" encoding="UTF-8" listfiles="true">
+			<classpath refid="compile.classpath"/>
+		</javac>
+		<!--
+		<javac srcdir="${src-portal-addon}" destdir="${bin-portal-addon}" encoding="UTF-8" listfiles="true">
+			<classpath refid="compile.classpath"/>
+		</javac>
+		-->
+		<javac srcdir="${src-aa}" destdir="${bin-aa}" encoding="UTF-8" listfiles="true">
+			<classpath refid="compile.classpath"/>
+		</javac>
+	</target>
+<!--___________________________________________________________________________________________________________________-->
+	<target name="compile-aa" depends="init" description="Compile [aa]..." >
+		<javac srcdir="${src-aa}" destdir="${bin-aa}" encoding="UTF-8" listfiles="true">
+			<classpath refid="compile.classpath"/>
+		</javac>
+	</target>
+<!--___________________________________________________________________________________________________________________-->
+	<target name="dist" depends="compile, copy" description="jar-Datei wird erstellt..." >
+		<mkdir dir="${dist}/lib"/>
+		<jar jarfile="${dist}/lib/${project.distname}.jar" basedir="${bin}">
+			<manifest>
+				<attribute name="Class-Path" value="topdev.jar ${project.distname}.jar"/>
+			</manifest>
+		</jar>
+		<jar jarfile="${dist}/lib/topdev-portlet.jar" basedir="${bin-aa}">
+			<manifest>
+				<attribute name="Class-Path" value="topdev-portal.jar"/>
+			</manifest>
+		</jar>
+		<!--
+		<jar jarfile="${dist}/topdev-portal-addon.jar" basedir="${bin-portal-addon}">
+			<manifest>
+				<attribute name="Class-Path" value="topdev-portal-addon.jar"/>
+			</manifest>
+		</jar>
+		-->
+	</target>
+<!--___________________________________________________________________________________________________________________-->
+	<target name="war" depends="init">
+		 <war
+				basedir="${project.path}"
+				webxml="${project.path}/WEB-INF/web.xml"
+				warfile="${project.path}/${project.distname}_${now}.war"
+			 	excludes="WEB-INF/build/**, *.scc, .*">
+			<exclude name="${project.distname}_${now}.war"/>
+		</war>
+	</target>
+<!--___________________________________________________________________________________________________________________-->
+	<target name="dev" depends="dist, msg" description="dev : ${jetzt}"></target>
+<!--___________________________________________________________________________________________________________________-->
+	<target name="all" depends="init, clean, javadoc" description="all : ${tstamp}"></target>
+<!--___________________________________________________________________________________________________________________-->
+</project>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="medium_detail_overview" extends="topdev-default" namespace="/medium_detail_overview">
+		<default-interceptor-ref name="submoduleStack"/>
+
+		<action name="view" class="com.topdev.tsp.action.modules.medium.detail.overview.DetailAction" method="view">
+			<interceptor-ref name="moduleStack"/>
+			<result name="view">/pages/modules/medium/detail/overview/view.jsp</result>
+			<result name="edit">/pages/modules/medium/detail/overview/edit.jsp</result>
+			<result name="login">/pages/modules/medium/detail/overview/login.jsp</result>
+		</action>	
+
+		<action name="edit" class="com.topdev.tsp.action.modules.medium.detail.overview.DetailAction" method="edit">
+			<interceptor-ref name="moduleStack"/>
+			<result name="view">/pages/modules/medium/detail/overview/view.jsp</result>
+			<result name="edit">/pages/modules/medium/detail/overview/edit.jsp</result>
+			<result name="login">/pages/modules/medium/detail/overview/login.jsp</result>
+		</action>
+		
+		<action name="tabs_edit" class="com.topdev.tsp.action.modules.medium.detail.overview.submodules.TabAction" method="edit">
+			<result name="tab1">/pages/modules/medium/detail/overview/submodules/tab1.jsp</result>
+			<result name="tab2">/pages/modules/medium/detail/overview/submodules/tab2.jsp</result>
+			<result name="tab3">/pages/modules/medium/detail/overview/submodules/tab3.jsp</result>
+			<result name="tab4">/pages/modules/medium/detail/overview/submodules/tab4.jsp</result>
+			<result name="tab5">/pages/modules/medium/detail/overview/submodules/tab5.jsp</result>
+			<result name="tab6">/pages/modules/medium/detail/overview/submodules/tab6.jsp</result>
+			<result name="tab6-edit">/pages/modules/medium/detail/overview/submodules/tab6-edit.jsp</result>
+			<result name="tab6-list">/pages/modules/medium/detail/overview/submodules/tab6.jsp</result>
+			<result name="tab7">/pages/modules/medium/detail/overview/submodules/tab7.jsp</result>
+			<result name="portlet_saved">/pages/modules/medium/detail/overview/submodules/portlet_saved.jsp</result>
+		</action>
+
+		<action name="kontrolliertesschlagwort_liste" class="com.topdev.tsp.action.modules.medium.detail.overview.submodules.templates.KontrolliertesschlagwortListAction" method="view">
+			<interceptor-ref name="ajaxStack"/>
+			<result name="success">/pages/modules/medium/detail/overview/submodules/templates/template-kontrolliertesschlagwort-list.jsp</result>
+		</action>
+
+		<action name="delete" class="com.topdev.tsp.action.modules.medium.detail.overview.DeleteAction" method="delete">
+			<interceptor-ref name="ajaxStack"/>
+			<result name="success">/pages/modules/medium/detail/overview/deleted.jsp</result>
+		</action>
+
+		<action name="sachgebiet_liste" class="com.topdev.tsp.action.modules.medium.detail.overview.submodules.templates.SachgebietListAction" method="view">
+			<interceptor-ref name="ajaxStack"/>
+			<result name="success">/pages/modules/medium/detail/overview/submodules/templates/template-sachgebiet-list.jsp</result>
+		</action>
+
+		<action name="previewUpload" class="com.topdev.tsp.action.modules.medium.detail.overview.submodules.PreviewUploadAction" method="upload">
+			<interceptor-ref name="ajaxUploadStack"/>
+			<result name="success">/pages/modules/medium/detail/overview/submodules/preview-uploaded.jsp</result>
+		</action>
+
+
+<!-- Adressen__________________________________________________________________________________________________________________________-->
+		<action name="file-list_*" class="com.topdev.tsp.action.modules.medium.detail.overview.submodules.FileListAction" method="{1}">
+			<result name="success">/pages/modules/medium/detail/overview/submodules/file-list.jsp</result>
+			<result name="error">/pages/lib/component/error.jsp</result>
+		</action>
+
+		<action name="file-detail_*" class="com.topdev.tsp.action.modules.medium.detail.overview.submodules.FileDetailAction" method="{1}">
+			<result name="success">/pages/modules/medium/detail/overview/submodules/file-form.jsp</result>		
+			<result name="list" type="chain">file-list_edit</result>
+			<result name="error">/pages/lib/component/error.jsp</result>
+		</action>
+
+	</package>
+</struts>

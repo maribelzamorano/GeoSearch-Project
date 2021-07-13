@@ -1,0 +1,53 @@
+package com.topdev.tsp.model.list.simple;
+
+import java.io.Serializable;
+
+
+public class SimpleHeading implements Cloneable, Serializable
+{
+	private static final long	serialVersionUID	= 1L;
+	String width;
+	String align;
+	String value;
+
+	@Override 
+	public SimpleHeading clone() 
+	{ 
+		try { return (SimpleHeading) super.clone(); } 
+		catch ( CloneNotSupportedException e ) { throw new InternalError(); }
+	}
+	public SimpleHeading(String value)
+	{
+		setValue(value);
+	}
+	public SimpleHeading(String value, String align)
+	{
+		setValue(value);
+		setAlign(align);
+	}
+	public String getAlign()
+	{
+		return align;
+	}
+	public void setAlign(String align)
+	{
+		this.align = align;
+	}
+	public String getValue()
+	{
+		return value;
+	}
+	public void setValue(String value)
+	{
+		this.value = value;
+	}
+	public String getWidth()
+	{
+		return width;
+	}
+	public void setWidth(String width)
+	{
+		this.width = width;
+	}
+
+}

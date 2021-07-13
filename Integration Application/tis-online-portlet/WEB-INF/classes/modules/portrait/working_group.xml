@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="working_group" extends="topdev-default" namespace="/working_group">
+		<interceptors>
+			<interceptor name="topdev-action" class="com.topdev.tsp.interceptor.ActionInterceptor"/>
+		</interceptors>
+		
+		<action name="index" class="com.topdev.tsp.action.modules.working_group.DetailAction">
+			<result name="view">/pages/modules/working_group/view.jsp</result>
+			<result name="edit">/pages/modules/working_group/edit.jsp</result>
+			<result name="saved">/pages/lib/component/saved.jsp</result>
+		</action>
+		
+		<action name="view" class="com.topdev.tsp.action.modules.working_group.DetailAction" method="view">
+			<result name="view">/pages/modules/working_group/view.jsp</result>
+			<result name="edit">/pages/modules/working_group/edit.jsp</result>
+			<result name="saved">/pages/lib/component/saved.jsp</result>
+		</action>	
+
+<!-- Drucken_______________________________________________________________________________________________________________________________-->
+		<action name="print" class="com.topdev.tsp.action.modules.working_group.DetailAction" method="print">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+		</action>				
+
+		<action name="working_group-list_*" class="com.topdev.tsp.action.modules.working_group.submodules.WorkingGroupListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/working_group/list-working_group.jsp</result>
+		</action>
+	</package>
+</struts>

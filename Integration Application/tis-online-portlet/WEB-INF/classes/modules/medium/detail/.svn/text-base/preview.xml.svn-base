@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="medium_detail_preview" extends="topdev-default" namespace="/medium_detail_preview">
+		<interceptors>
+			<interceptor name="topdev-action" class="com.topdev.tsp.interceptor.ActionInterceptor"/>
+		</interceptors>
+
+		<action name="view" class="com.topdev.tsp.action.modules.medium.detail.preview.ViewAction" method="view">
+			<result name="success">/pages/modules/medium/detail/preview/view.jsp</result>
+			<result name="login">/pages/modules/medium/detail/preview/login.jsp</result>
+		</action>	
+	</package>
+</struts>

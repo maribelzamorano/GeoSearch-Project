@@ -1,0 +1,1 @@
+<% request.setAttribute("ns", "working_group"); %>

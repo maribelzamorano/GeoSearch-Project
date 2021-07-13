@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="school_navigation" extends="topdev-default" namespace="/school_navigation">
+		<action name="view" class="com.topdev.tsp.action.modules.school_navigation.ViewAction">
+			<result name="success">/pages/modules/school_navigation/view.jsp</result>
+			<result name="reinit">/pages/modules/school_navigation/reinit.jsp</result>
+			<result name="hierarch">/pages/modules/school_navigation/hierarch.jsp</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="media" extends="topdev-default" namespace="/media">
+		<interceptors>
+			<interceptor name="topdev-action" class="com.topdev.tsp.interceptor.ActionInterceptor"/>
+		</interceptors>
+		
+		<action name="index" class="com.topdev.tsp.action.modules.media.DetailAction">
+			<result name="view">/pages/modules/media/view.jsp</result>
+			<result name="edit">/pages/modules/media/edit.jsp</result>
+			<result name="saved">/pages/lib/component/saved.jsp</result>
+		</action>
+		
+		<action name="view" class="com.topdev.tsp.action.modules.media.DetailAction" method="view">
+			<result name="view">/pages/modules/media/view.jsp</result>
+			<result name="edit">/pages/modules/media/edit.jsp</result>
+			<result name="saved">/pages/lib/component/saved.jsp</result>
+		</action>	
+
+<!-- Drucken_________________________________________________________________________________________________________________________________-->
+		<action name="print" class="com.topdev.tsp.action.modules.media.DetailAction" method="print">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+		</action>
+
+<!-- Internet__________________________________________________________________________________________________________________________-->		
+		<action name="internet-list_*" class="com.topdev.tsp.action.modules.media.submodules.InternetListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/media/submodules/list-internet.jsp</result>
+		</action>
+<!-- EDV-Raeume__________________________________________________________________________________________________________________________-->		
+		<action name="it_room-list_*" class="com.topdev.tsp.action.modules.media.submodules.ITRoomListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/media/submodules/list-it_room.jsp</result>
+		</action>
+<!-- Rechner__________________________________________________________________________________________________________________________-->		
+		<action name="computer-list_*" class="com.topdev.tsp.action.modules.media.submodules.ComputerListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/media/submodules/list-computer.jsp</result>
+		</action>
+	</package>
+</struts>

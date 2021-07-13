@@ -1,0 +1,187 @@
+a
+{
+	font-size:			12px;
+	color:				#000000;
+	text-decoration:	none; 
+	font-family:		arial;
+}
+
+a:hover							{	color:				red;	background-color: #FFFFFF;}
+a:focus, a:active				{	color:				red;	}
+a:link							{	color:				#000000;	}
+a.submenu_with_childs			{	font-weight:		bold;		}
+a.submenu_with_childs_active	{	font-weight:		bold;		color: #a82836; }
+a.submenu_without_childs		{	font-weight:		normal;		}
+a.submenu_without_childs_active	{	font-weight:		normal;		color: #a82836; }
+
+a.login, a.footer
+{
+	text-decoration:	underline; 
+	font-weight:		normal;
+	font-size:			10px;
+	font-family:		arial;
+	color:				#000000;
+}
+
+a:link.login, a:visited.login	{	color:				#000000;	}
+a:hover.login					{	color:					red;	}
+a:active.login					{	color:					red;	}
+a:focus.login					{	color:					red;	}
+
+table.login
+{
+	padding-top:		5px;
+}	
+
+table.logout
+{
+	padding-top:		7px;
+	padding-bottom:		10px;
+}	
+
+td.submenu_icon
+{
+	background-image:url(../../images/submenu_icon.gif);
+	background-position:0px 3px;
+	background-repeat:no-repeat;
+	width:10px;
+}
+td
+{
+	color:				#000000;
+	font-size:			12px;
+	font-family:		arial;
+}
+
+td.loginForm
+{
+	
+	font-weight:		normal;
+	width:				100px;
+}
+td.loginZugang
+{
+	
+	font-weight:		bold;
+}
+	
+
+table.search
+{
+	padding-top:		10px;
+	width:				150px;
+	margin-bottom:		2px;
+}
+
+table.menu
+{
+	margin-bottom:		10px;
+}
+	
+
+input
+{
+	 height:			18px;
+	 font-family:		arial; 
+	 font-size:			12px; 
+}
+
+input.loginFormData
+{
+	border:			1px solid #3A4D99; 
+	width:			100px;
+}
+
+input.searchButton
+{
+	margin-top:			4px;
+	padding-left:		10px;
+	width:				81px;
+	border-width:		0;
+	background-repeat:	no-repeat;
+	cursor:				hand;
+	background-image:	url(../../images/design/buttons/cb_search.gif);
+}
+	
+input.searchFormData
+{
+	 border:			1px solid #3A4D99; 
+	 width:				100px;
+}
+
+input.loginButton
+{
+	margin-top:			4px;
+	width:				81px;
+	border-width:		0; 
+	background-repeat:	no-repeat;
+	cursor:				hand;
+	background-image:	url(../../images/design/buttons/cb_login.gif);
+}
+
+input.logoutButton
+{
+	margin-top:			4px;
+	width:				82px;
+	border-width:		0;
+	background-position:center;
+	background-repeat:	no-repeat;
+	cursor:				hand;
+	background-image:	url(../../images/design/buttons/cb_logout.gif);
+}
+
+span
+{
+	color:				#000000;
+	text-decoration:	none; 
+	font-weight:		normal;
+	font-family:		arial;
+}
+
+span.errorSpan
+{
+	color:				red;
+	font-weight:		lighter;
+	font-size:			12px
+}
+
+span.footer			{	font-size:			11px;}
+span.loginInfo		{	font-size:			12px;}
+
+body
+{
+	padding-left:		12px;
+	padding-right:		0px;
+	padding-top:		5px;
+	padding-bottom:		0px;
+	margin-left:		3px;
+	margin-right:		0px;
+	margin-top:			10px;
+	margin-bottom:		0px;
+	font-size:			12px;
+	font-family:		arial;
+	font-weight:		normal;
+	text-decoration:	none;
+	background-color:	#F6F6FF;	
+
+	scrollbar-arrow-color:		#000000;
+	scrollbar-base-color:		#FFFFFF;
+	scrollbar-track-color:		#ffffff;
+	scrollbar-face-color:		#eeeeee;
+	scrollbar-highlight-color:	#d0d0d9;
+	scrollbar-3dlight-color: 	#d0d0d9;
+	scrollbar-darkshadow-color: #eeeeee;
+	scrollbar-shadow-color:		#d0d0d9;
+}
+
+
+
+img.logo {}
+
+hr.navigator
+{
+	width:		150px;
+	align:		left;
+	color:		#c9c9c9;
+	height:		1px;	
+	}

@@ -1,0 +1,21 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 19
+/svn/tsp5/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/tsp5/!svn/ver/2632/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/tsp5/!svn/ver/2524/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/.project
+END
+.pydevproject
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/tsp5/!svn/ver/2524/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/.pydevproject
+END

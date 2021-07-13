@@ -1,0 +1,661 @@
+/******************************************************************************/
+/* topdev Portal                                                     			*/
+/******************************************************************************/
+
+img.icon_edit, img.icon_delete, img.icon_new, img.icon_undo, img.img_checkbox
+{
+	background-position: center;
+	background-repeat:no-repeat;
+	cursor:hand;
+	width:17px; 
+	height:18px; 
+	border-width:0; 
+	margin-right:0px;´
+}
+
+img.icon_edit	{ background: url(../../images/icons/edit.gif); 	}
+img.icon_delete	{ background: url(../../images/icons/delete.gif) no-repeat;	}
+img.icon_new	{ background: url(../../images/icons/new.gif);		}
+img.icon_undo	{ background: url(../../images/icons/undo.gif);		}
+
+img.img_checkbox	{ background: url(../../images/icons/list/checked.gif); background-repeat:no-repeat;		}
+
+
+	div.title_big{
+		font-size: 			120%;
+		font-weight: 		bold;
+		letter-spacing:		0.3pt;
+		color:				#185888;
+	
+	}
+	div.title_bigger{
+		font-size: 			130%;
+		font-weight: 		bold;
+		letter-spacing:		0.3pt;
+		color:				#185888;
+	}
+	div.title_medium{
+		font-size: 			110%;
+		font-weight: 		bold;	
+	}
+	div.schoolnumber{
+		font-size: 			80%;
+	}
+	table.topdev_view
+	{		
+		border: 			0px solid #FFFFFF;
+	}
+	table.topdev_view tr > td 
+	{
+		padding-bottom:		4px;
+	}
+	table.topdev_view tr.line td{
+		border-bottom: 		1px solid #BBBBBB;
+	}	
+	table.topdev_view td.neuter_left
+	{
+		vertical-align: 	top;
+		border-bottom: 		0px solid #BBBBBB;
+		padding-right:		10px;
+	}
+	table.topdev_view td.space{
+		padding-left: 		15px;
+		padding-top: 		7px;
+		vertical-align:		top;
+	}
+	table.topdev_view  table.topdev_space_left 
+	{
+		width:				100%;
+		margin-left: 		15px;
+	
+	}
+	table.topdev_view table.topdev_space_left td{
+		padding:			0px;
+	}
+	
+	table.topdev_view  table.topdev_list_head td{
+		padding-bottom:			0px;
+	}
+	
+	table.topdev_view  table.topdev_list_head td.first{
+		padding-bottom:			7px;
+	}
+	
+	table.topdev_list_head {
+		margin-bottom:		0px;
+		padding-bottom:		0px;
+
+	}
+	
+	table.topdev_view  table.topdev_space_left td.right
+	{
+		padding-left:		10px;
+	}
+		
+	table.topdev_view td.space_top
+	{
+		padding-top: 		10px;
+		
+	}
+	table.topdev_view td.block
+	{
+		text-align:			justify;
+	}
+
+	table.topdev_view td.space_left
+	{
+		padding-left: 		15px;
+	}
+	td.topdev_left_space
+	{
+		padding-left:		7px;
+		padding-right:		2px;
+	}
+	
+	td.topdev_title_gray, div.topdev_title_gray{
+		text-align:			left;
+		color:				#666666;
+		font-size:			110%;
+		padding-top:		5px;
+
+
+	}
+	td.topdev_title_gray_first, div.topdev_title_gray_first{
+		text-align:			left;
+		color:				#666666;
+		font-size:			110%;
+		padding-top:		0px;
+
+
+	}
+	td.change
+		{
+		text-align:			right;
+		font-size:			80%;
+		color:				#888888;
+		}	
+	
+	div.tab_divX
+	{
+		background: 	url(../../images/icons/crux.gif) no-repeat top left;
+		width:		10px;
+	}
+#tsp_request{
+	
+	position: 			absolute;
+	height:				1500;
+	width:				1040;
+	top:				-240px;
+	left: 				-40px;
+	background-color: 	#6596B5;
+	z-index:			15!important;
+	-moz-opacity:		0.70; 
+	
+}
+
+ul {
+
+	list-style-type: 	none;
+	list-style-image: 	url(../../images/icons/bullet.gif);
+	margin: 			5px 0 10px 15px;
+	padding: 			0;
+}
+/******************************************************************************/
+/*	Navigation */
+/******************************************************************************/
+	div.school_search_navigation
+	{	
+		width:				179px;	
+		margin-right:		-11px;
+	}
+
+	
+	div.school_search_navigation a.highlight
+	{
+		font-weight:		bolder;
+		color:				#00CCCC;
+	
+	}
+	div.school_search_navigation a
+	{
+		white-space:nowrap;
+	}
+	div.tsp_ci{
+		height:				150px;
+		background: 	 	url(<%= themeDisplay.getPathThemeImage() %>/custom/ci/logo.jpg) scroll no-repeat bottom left;		
+	}
+	
+	div.topdev_nav_hierarch
+	{
+	height:				150px;
+	width:				179px;
+	background: 	 	url(<%= themeDisplay.getPathThemeImage() %>/custom/navigation_disabled.jpg) scroll no-repeat top left;
+	}
+	
+	td.topdev_nav, td.topdev_nav_last, td.highlight
+	{
+		padding-bottom:		5px;
+		padding-top:		5px;
+		height:				20px;
+		font-weight:		bolder;
+		font-size:			95%;
+		border-top: 		1px dotted #C1CCC9;	
+	}
+	
+	td.topdev_nav_last
+	{
+		border-bottom: 		1px dotted #C1CCC9;
+	}
+	td.topdev_nav a, td.topdev_nav_last a
+	{
+		color:				#000000;
+		padding-left:		7px;
+		
+	}
+	td.highlight
+	{
+		background-color:	#EEEEEE;
+		padding-left:		7px;
+		border-top:			1px dotted #6596B5;
+		border-bottom:		1px dotted #6596B5;
+		border-left:		1px dotted #6596B5;
+		border-right:		1px solid #6596B5;
+	}
+	td.highlight a
+	{
+		color:				#CC0000;
+	}
+	div.schoolname
+	{
+		margin-bottom:		5px;
+	}
+	div.schoolname td.schoolname
+	{
+		font-size:			100%;
+		color: 				#185888;
+		padding-right:		0px;
+		text-align:			right;
+		font-weight:		bold;
+		width:				150px;
+		padding-right:		7px;
+		
+	}
+	div.schoolname td.right
+	{
+		background-color:	#185888;
+		width:				8px;
+	}
+	div.schoolname td.left
+	{
+		width:				20px;
+	}
+	div.back
+	{	
+		text-align:			right;
+		padding-right:		7px;
+		
+	}
+	a.topdev_link
+	{
+		color:			#CC0000;
+		font-weight:	bolder;
+		font-size:		95%;
+	}
+	/******************************************************************************/
+/*	Formular */
+/******************************************************************************/
+	table.topdev_form
+	{
+		margin-top:		8px;
+		
+	}
+	
+	table.topdev_form td
+	{	
+		padding-left:	13px;
+		vertical-align:	top;
+		padding-right:	2px;
+		padding-top:	2px;
+		padding-bottom:	2px;
+	}
+	table.topdev_form_view td
+	{	
+		padding-left:	0px;
+		padding-top:	0px;
+		padding-bottom:	0px;
+		vertical-align:	top;		
+	}
+	
+	table.topdev_form td.obligation
+	{	
+		background: 	 url(../../images/icons/crux.gif) no-repeat top left;
+	}
+	table.topdev_form td.title
+	{
+		color:			#CC6633;
+		font-weight:	bold;
+	}
+
+	table.topdev_form select, table.topdev_form input, table.topdev_login input, table.topdev_form textarea
+	{
+		border: 		1px solid #7F9DB9;
+		width:			100%;
+		font-family:	Arial, Verdana;
+		font-size:		100%;
+	}
+	table.topdev_form select, table.topdev_form input, table.topdev_login input 
+	{
+		height:			18px;
+	}
+	
+	table.topdev_form input.portlet-form-button, table.topdev_login input.portlet-form-button
+	{
+		border: 		0px solid #FFFFFF;
+		background: 	url(../../images/design/buttons/btn-topdev-full.jpg) scroll no-repeat;	
+		color:			#FFFFFF;
+		width: 			75px;
+		padding-bottom: 3px;
+		font-size:		90%;
+	}
+	table.topdev_form input.portlet-form-button_disabled
+	{
+		border: 		0px solid #FFFFFF;
+		background: 	url(../../images/design/buttons/btn-topdev-disabled.jpg) scroll no-repeat;	
+		color:			#ADCADA;
+		width: 			75px;
+		padding-bottom: 3px;
+		font-size:		90%;
+	}	
+	input[value="Abbrechen"], input[value="Speichern"], input[value="Anmelden"], input[value="Leeren"], input[value="Suchen"], input[value="OK"],  input[value="Hinzufügen"],  input[value="Drucken"]
+	{		
+		border: 		0px solid #FFFFFF;
+		width: 			75px;			
+		padding-bottom: 3px;
+	}
+	table.topdev_form input[value="Abbrechen"], table.topdev_form input[value="Leeren"], table.topdev_login input[value="Leeren"]
+	{		
+		background: 	url(../../images/design/buttons/btn-topdev-line.jpg) scroll no-repeat;	
+		color:			#1C6C9A;
+	}
+	input[value="Speichern"], input[value="Anmelden"], input[value="Suchen"], input[value="OK"], input[value="Hinzufügen"], input[value="Durchsuchen"] 
+	{		
+		background: 	url(../../images/design/buttons/btn-topdev-full.jpg) scroll no-repeat ;	
+		color:			#FFFFFF;
+	}
+	table.topdev_form input[value="Drucken"] 
+	{		
+		background: 	url(../../images/design/buttons/btn-topdev-print.jpg) scroll no-repeat ;	
+		color:			#CC0000;
+		font-weight:	bolder;
+		text-align:		right;
+		font-size:		75%;
+		
+	}
+	table.topdev_form input.topdev_button_print, table.topdev_view input.topdev_button_print 
+	{		
+		border: 		0px solid #FFFFFF;
+		background: 	url(../../images/design/buttons/btn-topdev-print.jpg) scroll no-repeat;	
+		width: 			75px;
+		padding-bottom: 3px;
+		padding-left: 	20px;
+		color:			#CC0000;
+		font-weight:	bolder;
+		text-align:		left;
+		font-size:		100%;
+	}
+	
+	input[value="Drucken"] 
+	{		
+		background: 	url(../../images/design/buttons/btn-topdev-print.jpg)  scroll no-repeat;	
+		color:			#CC0000;
+		font-weight:	bolder;
+		text-align:		right;
+		font-family:	Arial, Verdana,sans-serif;
+		font-size:		95%;
+
+	}
+	input[value="Anzeigereihenfolge aktualisieren"], input[value="Speichern und Genehmigen"]
+	{		
+		background: 	url(../../images/design/buttons/btn-topdev-full-wide.jpg) scroll no-repeat;	
+		color:			#FFFFFF;
+		width: 			165px;
+	}
+	input[value="Seite hinzufügen"]
+	{		
+		background: 	url(../../images/design/buttons/btn-topdev-full-wider.jpg) scroll no-repeat;	
+		color:			#FFFFFF;
+		width: 			100px;
+	}
+	
+	table.topdev_form input.portlet-form-button-line, table.topdev_login input.portlet-form-button-line
+	{
+		border: 		0px solid #FFFFFF;
+		background: 	url(../../images/design/buttons/btn-topdev-line.jpg)  scroll no-repeat;
+		color:			#1C6C9A;	
+		width: 			75px;
+		padding-bottom: 2px;
+		font-size:		90%;
+	}
+	table.topdev_form td.buttonbar
+	{
+		text-align:		right;
+	}
+	
+	table.topdev_form td.button
+	{
+		padding-top:	4px;
+	}
+	
+	td.map
+	{
+		text-align:			left;
+		padding-left:		35px;
+		padding-right:		10px;
+		padding-bottom:		10px;
+	}
+	td.search
+	{		
+		padding-left:		0px;
+		vertical-align:		top;
+		padding-top:		0px;
+
+	}
+/******************************************************************************/
+/*	Login */
+/******************************************************************************/
+
+	table.topdev_login
+	{
+	}
+	
+	table.topdev_login td
+	{	
+		padding-left:	0px;
+		vertical-align:	top;
+	}
+
+div.topdev_dropedit2
+{
+	position: 			absolute;
+	z-index: 			1;
+	top:				0px;
+	right:				0px;
+	left:				0px;
+}
+div.topdev_dropedit1
+{
+	height:				22px;
+	position: 			absolute;
+	z-index: 			2;
+	right: 				20px;
+	top:				0px;
+	bottom:				0px;
+	right:				18px;
+	left:				0px;
+}
+div.topdev_dropedit1 input.topdev_dropedit1
+{
+	height:				18px;
+	
+	}
+.ie div.topdev_dropedit1 input.topdev_dropedit1
+{
+	height:				16px;
+	margin-top:			-1px;
+	
+	}
+/******************************************************************************/
+/*	Trefferlisten */
+/******************************************************************************/
+	table.topdev_hitlist, table.topdev_hitlist_headless, table.topdev_hitlist_head
+	{
+		margin-top:			10px;
+		background-color:	#CEDFE9;
+		border-spacing:		1px;
+		cellspacing:		1px;
+
+	}
+	table.topdev_hitlist tr, table.topdev_hitlist_headless tr, table.topdev_hitlist_head tr
+	{
+		background-color:#ffffff;
+	}
+	table.topdev_hitlist th
+	{
+		padding:		3px;
+		vertical-align:	top;
+		border:			1px solid #CEDFE9;
+	}
+	.ie table.topdev_hitlist th
+	{	
+		border:			0px solid #CEDFE9;
+	}
+	table.topdev_hitlist td
+	{
+		padding:			3px;
+		vertical-align:		top;
+		border:				1px solid #CEDFE9;
+	}
+	
+	table.topdev_hitlist_head, table.topdev_hitlist_head th
+	{
+		border:				1px solid #CEDFE9;
+	}
+	
+	table.topdev_hitlist_head td.handicap
+	{
+		border:				1px solid #CEDFE9;
+	}
+	
+	.ie table.topdev_hitlist_head td.handicap
+	{
+		border:				0px solid #CEDFE9;
+	}
+	
+	
+	
+/* ---------- Versionsumstellung liferay: Voreinstellungen cellspacing erhalten ----------*/
+ 
+	.ie table.topdev_hitlist_head, .ie table.topdev_hitlist td {
+		border:				0px solid #FFF;
+	}	
+	
+	
+	table.topdev_hitlist_headless td
+	{
+		padding:		1px;
+		padding-left:	3px;
+		vertical-align:	top;
+
+	}
+	table.topdev_hitlist_headless td.left, table.topdev_hitlist_head td.left, table.topdev_hitlist_head th.left
+	{
+		padding:		0px;
+		padding-left:	15px;
+	}
+	table.topdev_hitlist_headless td.first
+	{
+		padding:		3px;
+	}
+	
+	table.topdev_hitlist_head td.first
+	{
+		padding:		6px;
+		padding-left:	15px;
+	}
+	
+	table.topdev_hitlist_head td.space_top
+	{
+		padding-top:		6px;
+
+	}
+	
+	tr.row_odd td
+	{
+	background-color:#EEEEEE;
+	
+	}
+	
+	table.topdev_hitlist tr.row_odd td
+	{
+		padding:	3px;		
+	}
+
+	table.topdev_hitlist_head col.topdev_iconbar, table.topdev_hitlist col.topdev_iconbar
+	{
+		width:				15px;
+	}
+
+	table.topdev_hitlist_head td.topdev_iconbar, table.topdev_hitlist_head th.topdev_iconbar, table.topdev_hitlist td.topdev_iconbar, table.topdev_hitlist th.topdev_iconbar
+	{
+		background-color:	#ffffff;
+		vertical-align:		top;
+		text-align:			left;
+		padding:			3px;
+		white-space:		nowrap;
+		border:				1px solid #CEDFE9;	
+	}
+	
+	table.topdev_hitlist_head col.topdev_cursorbar, table.topdev_hitlist col.topdev_cursorbar
+	{
+		width:				5px;
+	}
+	
+	table.topdev_hitlist_head td.topdev_cursorbar, table.topdev_hitlist td.topdev_cursorbar
+	{
+		background-color:	#ffffff;
+		vertical-align:		top;
+		padding:			5px;	
+		
+	}
+	table.topdev_hitlist_head th.topdev_iconbar ,table.topdev_hitlist_head col.topdev_iconbar
+	{
+		padding:				3px;
+		width:					15px;
+		height:					27px;
+	}
+	table.topdev_hitlist_head td.normal
+	{
+		padding:				5px;
+		padding-left:			8px;
+	
+	}
+	
+	table.topdev_hitlist_head td.foot
+	{
+		
+		padding-top:			15px;
+		color:					#717171;		
+		font-style:				italic;
+	
+	}
+	
+	div.topdev_list_contributer table.topdev_hitlist td.topdev_column
+	{
+		width:					180px;
+	}
+	ul.topdev_link_intern, ul.topdev_documents, ul.topdev_link_extern
+	{
+		padding-left:			0px;
+		padding-top:			7px;
+		list-style:				none;
+		margin-right:			0px;
+
+	}
+	ul.topdev_link_content_extern
+	{	
+		padding-left:			15px;
+
+	}
+	.ie ul.topdev_link_content_extern
+	{	
+		padding-left:			7px;
+
+	}
+	ul.topdev_link_intern li, ul.topdev_documents li, ul.topdev_link_extern li
+	{	
+		padding-bottom:			6px;
+		padding-left:			5px,
+		list-style-position:	outside;
+	}
+	ul.topdev_link_intern li
+	{
+		list-style-image:		url(../../images/icons/portlet/link_intern_heigher.gif);
+	}
+	ul.topdev_documents li
+	{
+		list-style-image:		url(../../images/icons/portlet/document.gif);
+	}
+	ul.topdev_link_extern li, ul.topdev_link_content_extern li
+	{
+		list-style-image:		url(../../images/icons/portlet/link_extern_heigher.gif);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

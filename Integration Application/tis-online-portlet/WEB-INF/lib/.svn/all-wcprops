@@ -1,0 +1,411 @@
+K 26
+svn:wc:ra_dav:activity-url
+V 19
+/svn/tsp5/!svn/act/
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/tsp5/!svn/ver/2612/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib
+END
+AnlaService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/AnlaService.jar
+END
+MediumSignaturService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumSignaturService.jar
+END
+JahrService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/JahrService.jar
+END
+MediumSignaturartService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumSignaturartService.jar
+END
+MediumService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumService.jar
+END
+JahrgangService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/JahrgangService.jar
+END
+SchuleSchulportraitService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/SchuleSchulportraitService.jar
+END
+MediumUnterartService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumUnterartService.jar
+END
+MediumKlassifikationService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumKlassifikationService.jar
+END
+TanaZeitscheibeService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/TanaZeitscheibeService.jar
+END
+RoomAssignmentService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/RoomAssignmentService.jar
+END
+MediumDateiService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumDateiService.jar
+END
+TitelService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/TitelService.jar
+END
+ArtikelUrlService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/ArtikelUrlService.jar
+END
+MediumUrheberService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumUrheberService.jar
+END
+TanaTeamService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/TanaTeamService.jar
+END
+MediumAdrService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumAdrService.jar
+END
+AuthenticationService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/AuthenticationService.jar
+END
+FachrichtungService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/FachrichtungService.jar
+END
+AlfrescoService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/AlfrescoService.jar
+END
+ZielgruppeService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/ZielgruppeService.jar
+END
+MediumStandortService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumStandortService.jar
+END
+TanaAufgabeService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/TanaAufgabeService.jar
+END
+DokumentierendeStelleService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/DokumentierendeStelleService.jar
+END
+MediumFachgebietService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumFachgebietService.jar
+END
+MediumFskService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumFskService.jar
+END
+SchwerpunktService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/SchwerpunktService.jar
+END
+VeranstaltungsartService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/VeranstaltungsartService.jar
+END
+MediumFktKatService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumFktKatService.jar
+END
+MediumLizenzpreisService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumLizenzpreisService.jar
+END
+MediumUrheberfunktionService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumUrheberfunktionService.jar
+END
+TanaService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/TanaService.jar
+END
+BildService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/BildService.jar
+END
+GeschlechtService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/GeschlechtService.jar
+END
+MediumSachgebietService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumSachgebietService.jar
+END
+RegistrationService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/RegistrationService.jar
+END
+SchulamtService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/SchulamtService.jar
+END
+BerechtigungService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/BerechtigungService.jar
+END
+SchuleService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/SchuleService.jar
+END
+VeranstaltungService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/VeranstaltungService.jar
+END
+SchulartService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/SchulartService.jar
+END
+MediumGroesseneinheitService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumGroesseneinheitService.jar
+END
+TestService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/TestService.jar
+END
+AnbieterService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/AnbieterService.jar
+END
+MediumISBNService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumISBNService.jar
+END
+SchultraegerService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/SchultraegerService.jar
+END
+UntergruppeService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/UntergruppeService.jar
+END
+topdev-arch-bridge.jar
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/tsp5/!svn/ver/2503/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/topdev-arch-bridge.jar
+END
+TanaGruppierungService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/TanaGruppierungService.jar
+END
+GeschaeftspartnerService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/GeschaeftspartnerService.jar
+END
+MediumSpracheService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumSpracheService.jar
+END
+MediumVerwendungService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumVerwendungService.jar
+END
+MediumFrSchlagwortService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumFrSchlagwortService.jar
+END
+FortbildungsartService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/FortbildungsartService.jar
+END
+VeranstaltungsortService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/VeranstaltungsortService.jar
+END
+EafImportService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/EafImportService.jar
+END
+MediumArtService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumArtService.jar
+END
+SchulamtskreisService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/SchulamtskreisService.jar
+END
+MediumProArtService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumProArtService.jar
+END
+MediumSprachergaenzungService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumSprachergaenzungService.jar
+END
+MediumExterneLinksService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumExterneLinksService.jar
+END
+MediumKonSchlagwortService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumKonSchlagwortService.jar
+END
+MediumLizenzService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumLizenzService.jar
+END
+MediumFeiertagsfreigabeService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumFeiertagsfreigabeService.jar
+END
+MediumStatusService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumStatusService.jar
+END
+MessageService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MessageService.jar
+END
+MediumProLandService.jar
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/tsp5/!svn/ver/2909/(30)%20Entwicklung/(30)%20web/work/HWE/main/server/webapps/tis-online-portlet/WEB-INF/lib/MediumProLandService.jar
+END

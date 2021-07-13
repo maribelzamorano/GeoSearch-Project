@@ -1,0 +1,1 @@
+<% request.setAttribute("ns", "school_image"); %>

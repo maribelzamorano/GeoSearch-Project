@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="common_image" extends="topdev-default" namespace="/common_image">
+		<action name="view" class="com.topdev.tsp.action.modules.common.image.ViewAction" method="view">
+			<interceptor-ref name="moduleStack"/>
+			<result name="success">/pages/modules/common/image/view.jsp</result>
+		</action>
+		<action name="ajax-view" class="com.topdev.tsp.action.modules.common.image.AjaxViewAction" method="view">
+			<interceptor-ref name="ajaxStack"/>
+			<result name="success">/pages/modules/common/image/ajax-view.jsp</result>
+		</action>
+	</package>
+</struts>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="school_image" extends="topdev-default" namespace="/school_image">
+		<interceptors>
+			<interceptor name="topdev-action" class="com.topdev.tsp.interceptor.ActionInterceptor"/>
+		</interceptors>
+
+		<action name="view" class="com.topdev.tsp.action.modules.school_image.DetailAction" method="view">
+			<result name="view">/pages/modules/school_image/view.jsp</result>
+		</action>
+	</package>
+</struts>

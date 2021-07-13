@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app          
+	id="TISPortlet"
+	xmlns="http://java.sun.com/xml/ns/j2ee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd"
+	version="2.4">
+<!-- ___________ Allgemeine Angaben _______________________________________________________--> 
+     
+	<display-name>tis-online-portlet</display-name>  
+	<jsp-config>
+		<jsp-property-group>
+			<url-pattern>*.jsp</url-pattern>
+			<el-ignored>false</el-ignored>
+			<page-encoding>UTF-8</page-encoding>
+		</jsp-property-group>
+    </jsp-config>
+	<context-param>
+		<param-name>company_id</param-name>
+		<param-value>liferay.com</param-value>
+	</context-param>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext*.xml</param-value>
+	</context-param>
+  
+	<welcome-file-list>
+		<welcome-file>init.jsp</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+          
+	<!-- ___________ Listener _______________________________________________________ -->
+	<listener><listener-class>com.liferay.portal.kernel.servlet.PortletContextListener</listener-class></listener>
+	<listener><listener-class>org.springframework.web.context.ContextLoaderListener</listener-class></listener>
+	<listener><listener-class>org.apache.struts2.portlet.context.ServletContextHolderListener</listener-class></listener>
+	<listener><listener-class>com.topdev.tsp.listener.SessionListener</listener-class></listener>
+	<listener><listener-class>com.topdev.tsp.listener.ContextListener</listener-class></listener>
+	<!-- ___________ Filter _______________________________________________________ -->
+
+	<filter>
+    	<filter-name>springFilter</filter-name>
+    	<filter-class>org.springframework.web.filter.RequestContextFilter</filter-class>
+	</filter>
+
+	<filter id="filterdispatcher"><filter-name>action2</filter-name><filter-class>org.apache.struts2.dispatcher.FilterDispatcher</filter-class></filter>
+	<filter><filter-name>downloadFilter</filter-name><filter-class>com.topdev.tsp.filter.DownloadFilter</filter-class></filter>
+    
+	<!-- ___________ Filter mappings _______________________________________________________ -->
+	<filter-mapping>
+	    <filter-name>springFilter</filter-name>
+	    <url-pattern>/*</url-pattern>
+	</filter-mapping>
+	<filter-mapping><filter-name>action2</filter-name><url-pattern>/*</url-pattern></filter-mapping>
+	<filter-mapping><filter-name>downloadFilter</filter-name><url-pattern>/download/virtual/*</url-pattern></filter-mapping>
+
+	<!--  
+		Sollte über der des Portals liegen. 
+		Daten werden hier sowieso nicht abgelegt.
+		Das session timeout wird auch vom portal angesteuert
+	-->
+	<session-config>
+		<session-timeout>240</session-timeout>
+	</session-config>
+
+	<!-- ___________ Servlets _______________________________________________________ -->
+	<servlet><servlet-name>setAttributeServlet</servlet-name><servlet-class>com.topdev.tis.servlet.SetAttributeServlet</servlet-class></servlet>
+	<servlet><servlet-name>uploadImporter</servlet-name><servlet-class>com.topdev.aa.servlet.UploadImporter</servlet-class></servlet>
+	<servlet><servlet-name>rssFeedCreator</servlet-name><servlet-class>com.topdev.tsp.servlet.RssFeedCreator</servlet-class></servlet>
+	<servlet><servlet-name>imageScaler</servlet-name><servlet-class>com.topdev.aa.servlet.ScaleImages</servlet-class></servlet>
+	<servlet><servlet-name>help</servlet-name>							<servlet-class>UrlHelpConnector</servlet-class></servlet>
+	<servlet><servlet-name>PortletServlet01</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet02</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet03</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet04</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet05</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet051</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet06</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet07</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet08</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet09</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet10</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet11</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet12</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet14</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet13</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet15</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet16</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet17</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet18</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet19</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet20</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet21</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet22</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet23</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet24</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet25</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet26</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet27</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet28</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet29</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet30</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet31</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet32</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet33</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet34</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet35</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet36</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet37</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet38</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet><servlet-name>PortletServlet39</servlet-name>	<servlet-class>com.liferay.portal.kernel.servlet.PortletServlet</servlet-class><init-param><param-name>portlet-class</param-name><param-value>org.apache.struts2.portlet.dispatcher.Jsr168Dispatcher</param-value></init-param><load-on-startup>0</load-on-startup></servlet>
+	<servlet id="preparator">	<servlet-name>preparator</servlet-name>	<servlet-class>org.apache.struts2.portlet.context.PreparatorServlet</servlet-class></servlet>
+	<servlet id="dwr">			<servlet-name>dwr</servlet-name>		<servlet-class>uk.ltd.getahead.dwr.DWRServlet</servlet-class></servlet>
+     
+	<!-- ___________ Servlet mappings _______________________________________________________ -->
+	<servlet-mapping><servlet-name>setAttributeServlet</servlet-name><url-pattern>/setAttribute.servlet</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>uploadImporter</servlet-name><url-pattern>/uploadImporter.servlet</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>rssFeedCreator</servlet-name><url-pattern>/RssFeedCreator.servlet</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>imageScaler</servlet-name><url-pattern>/imageScaler.servlet</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>help</servlet-name>			<url-pattern>*.help</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet01</servlet-name><url-pattern>/portlet_katalog/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet02</servlet-name><url-pattern>/portlet_businesspartner/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet03</servlet-name><url-pattern>/portlet_mybusinesspartner/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet04</servlet-name><url-pattern>/portlet_neuter_resources/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet05</servlet-name><url-pattern>/portlet_personal_resources/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet051</servlet-name><url-pattern>/portlet_personal_resources_statistic/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet06</servlet-name><url-pattern>/portlet_cooperation/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet07</servlet-name><url-pattern>/portlet_documents/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet08</servlet-name><url-pattern>/portlet_learner_structure/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet09</servlet-name><url-pattern>/portlet_school_evolution/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet10</servlet-name><url-pattern>/portlet_school_life/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet11</servlet-name><url-pattern>/portlet_school_search/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet12</servlet-name><url-pattern>/portlet_school_navigation/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet14</servlet-name><url-pattern>/portlet_login/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet15</servlet-name><url-pattern>/portlet_portal_navigation/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet16</servlet-name><url-pattern>/portlet_school_intention/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet17</servlet-name><url-pattern>/portlet_school_library/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet18</servlet-name><url-pattern>/portlet_section_documents/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet19</servlet-name><url-pattern>/portlet_media/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet20</servlet-name><url-pattern>/portlet_pupil_magazine/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet21</servlet-name><url-pattern>/portlet_working_group/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet22</servlet-name><url-pattern>/portlet_contributer/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet23</servlet-name><url-pattern>/portlet_activate_quality/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet24</servlet-name><url-pattern>/portlet_system/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet25</servlet-name><url-pattern>/portlet_school_image/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet26</servlet-name><url-pattern>/portlet_contact/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet27</servlet-name><url-pattern>/portlet_medium_category/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet28</servlet-name><url-pattern>/portlet_medium_search/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet29</servlet-name><url-pattern>/portlet_medium_navigation/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet30</servlet-name><url-pattern>/portlet_medium_result/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet31</servlet-name><url-pattern>/portlet_medium_result_newest/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet32</servlet-name><url-pattern>/portlet_medium_result_favorite/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet33</servlet-name><url-pattern>/portlet_medium_detail_overview/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet34</servlet-name><url-pattern>/portlet_medium_detail_preview/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet35</servlet-name><url-pattern>/portlet_medium_detail_files/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet36</servlet-name><url-pattern>/portlet_medium_detail_links/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet37</servlet-name><url-pattern>/portlet_portrait_schools_bychance/*</url-pattern></servlet-mapping>
+	<servlet-mapping><servlet-name>PortletServlet38</servlet-name><url-pattern>/portlet_medium_logview/*</url-pattern></servlet-mapping>	
+	<servlet-mapping><servlet-name>PortletServlet39</servlet-name><url-pattern>/portlet_common_image/*</url-pattern></servlet-mapping>	
+	
+	<servlet-mapping><servlet-name>dwr</servlet-name>			<url-pattern>/dwr/*</url-pattern></servlet-mapping>
+</web-app>

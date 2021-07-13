@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+
+	<package name="businesspartner" extends="topdev-default" namespace="/businesspartner">
+		<result-types>
+			<result-type name="xsl" class="com.topdev.aa.lib.XSLTResult"/>
+		</result-types>
+		
+		<action name="index" class="com.topdev.tsp.action.modules.businesspartner.DetailAction">
+			<result name="view">/pages/modules/businesspartner/view.jsp</result>
+			<result name="edit">/pages/modules/businesspartner/edit.jsp</result>
+			<result name="saved">/pages/modules/businesspartner/saved.jsp</result>
+			<result name="error">/pages/lib/component/error.jsp</result>
+		</action>
+		
+		<action name="view" class="com.topdev.tsp.action.modules.businesspartner.DetailAction" method="view">
+			<result name="view">/pages/modules/businesspartner/view.jsp</result>
+			<result name="edit">/pages/modules/businesspartner/edit.jsp</result>
+			<result name="saved">/pages/modules/businesspartner/saved.jsp</result>
+			<result name="error">/pages/lib/component/error.jsp</result>
+		</action>
+		
+		<action name="save" class="com.topdev.tsp.action.modules.businesspartner.DetailAction" method="save">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="saved">/pages/lib/component/saved.jsp</result>
+			<result name="error">/pages/lib/component/error.jsp</result>
+		</action>
+		
+		<action name="edit" class="com.topdev.tsp.action.modules.businesspartner.DetailAction" method="edit">
+			<result name="view">/pages/modules/businesspartner/view.jsp</result>
+			<result name="edit">/pages/modules/businesspartner/edit.jsp</result>
+			<result name="saved">/pages/modules/businesspartner/saved.jsp</result>
+			<result name="error">/pages/lib/component/error.jsp</result>
+		</action>
+
+<!-- Drucken__________________________________________________________________________________________________________________________-->
+		<action name="print" class="com.topdev.tsp.action.modules.businesspartner.DetailAction" method="print"><interceptor-ref name="topdevDefaultActionStack"/></action>
+
+<!-- Hierarch__________________________________________________________________________________________________________________________-->
+		<action name="hierarch" class="com.topdev.tsp.action.modules.businesspartner.DetailHierarchAction" method="view">
+			<result name="view">/pages/modules/businesspartner/view-hierarch.jsp</result>
+			<result type="chain" name="overview">view</result>
+			<result name="error">/pages/lib/component/error.jsp</result>
+		</action>
+
+		<action name="directions" class="com.topdev.tsp.action.modules.businesspartner.DetailDirectionsAction" method="view">
+			<result name="view">/pages/modules/businesspartner/view-directions.jsp</result>
+			<result type="chain" name="overview">view</result>
+			<result name="error">/pages/lib/component/error.jsp</result>
+		</action>
+
+<!--	<action name="my" class="com.topdev.tsp.action.modules.businesspartner.DetailAction" method="my">
+			<result name="success">/pages/modules/businesspartner/edit.jsp</result>
+		</action>
+-->
+<!-- Allgemein__________________________________________________________________________________________________________________________-->
+		<action name="detail_*" class="com.topdev.tsp.action.modules.businesspartner.DetailAction" method="{1}">
+			<result name="success">/pages/modules/businesspartner/edit.jsp</result>
+			<result name="error">/pages/lib/component/error.jsp</result>
+		</action>
+
+		<action name="detail" class="com.opensymphony.xwork2.ActionSupport">
+			<result name="success">/pages/modules/businesspartner/view-detail.jsp</result>
+			<result name="error">/pages/lib/component/error.jsp</result>
+		</action>
+		<action name="common-form" class="com.topdev.tsp.action.modules.businesspartner.submodules.CommonFormAction">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/businesspartner/submodules/form-common.jsp</result>
+			<result name="error">/pages/lib/component/error.jsp</result>
+		</action>
+		<action name="detail-form" class="com.topdev.tsp.action.modules.businesspartner.submodules.DetailFormAction">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/businesspartner/submodules/form-detail.jsp</result>
+			<result name="error">/pages/lib/component/error.jsp</result>
+		</action>
+<!-- Schulbild__________________________________________________________________________________________________________________________-->
+		<action name="image-list_*" class="com.topdev.tsp.action.modules.businesspartner.submodules.ImageListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/businesspartner/submodules/list-image.jsp</result>
+			<result name="error">/pages/lib/component/error.jsp</result>
+		</action>
+
+		<action name="image-detail_*" class="com.topdev.tsp.action.modules.businesspartner.submodules.ImageDetailAction" method="{1}">
+			<interceptor-ref name="topdevDefaultUploadActionStack"/>
+			<result name="success">/pages/modules/businesspartner/submodules/form-image.jsp</result>
+			<result name="saved">/pages/lib/component/saved-inline.jsp</result>
+			<result name="list" type="chain">image-list_edit</result>
+			<result name="error">/pages/lib/component/error.jsp</result>
+		</action>
+<!-- Schulteile__________________________________________________________________________________________________________________________-->
+		<action name="schooltract-list_*" class="com.topdev.tsp.action.modules.businesspartner.submodules.SchooltractListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/businesspartner/submodules/list-schooltract.jsp</result>
+			<result name="error">/pages/lib/component/error.jsp</result>
+		</action>
+
+		<action name="schooltract-detail_*" class="com.topdev.tsp.action.modules.businesspartner.submodules.SchooltractDetailAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/businesspartner/submodules/form-schooltract.jsp</result>		
+			<result name="list" type="chain">schooltract-list_edit</result>
+			<result name="error">/pages/lib/component/error.jsp</result>
+		</action>
+		
+<!-- Adressen__________________________________________________________________________________________________________________________-->
+		<action name="address-list_*" class="com.topdev.tsp.action.modules.businesspartner.submodules.AddressListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/businesspartner/submodules/list-address.jsp</result>
+			<result name="error">/pages/lib/component/error.jsp</result>
+		</action>
+
+		<action name="address-detail_*" class="com.topdev.tsp.action.modules.businesspartner.submodules.AddressDetailAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/businesspartner/submodules/form-address.jsp</result>		
+			<result name="list" type="chain">address-list_edit</result>
+			<result name="error">/pages/lib/component/error.jsp</result>
+		</action>
+		
+		
+<!-- Kommunikation__________________________________________________________________________________________________________________________-->
+		<action name="communication-list_*" class="com.topdev.tsp.action.modules.businesspartner.submodules.CommunicationListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/businesspartner/submodules/list-communication.jsp</result>
+			<result name="error">/pages/lib/component/error.jsp</result>
+		</action>
+
+		<action name="communication-detail_*" class="com.topdev.tsp.action.modules.businesspartner.submodules.CommunicationDetailAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/businesspartner/submodules/form-communication.jsp</result>
+			<result name="list" type="chain">communication-list_edit</result>
+			<result name="error">/pages/lib/component/error.jsp</result>
+		</action>
+	</package>
+</struts>

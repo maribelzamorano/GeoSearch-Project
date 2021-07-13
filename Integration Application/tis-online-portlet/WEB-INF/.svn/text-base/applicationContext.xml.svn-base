@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.0.xsd
+       http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-2.0.xsd"
+       default-autowire="autodetect">
+
+	<bean id="sessionBean"			class="com.topdev.tsp.model.aop.SessionBean">
+		<property name="configurationBean"><ref bean="configurationBean" /></property>
+	</bean>
+	<bean id="textBean"				class="com.topdev.tsp.model.aop.TextBean"></bean>
+	<bean id="dataSourceBean"		class="com.topdev.tsp.model.aop.DataSourceBean"></bean>
+	<bean id="configurationBean"	class="com.topdev.tsp.model.aop.ConfigurationBean"></bean>
+	
+	<bean id="basicActionSupport"	class="com.topdev.tsp.action.basic.BasicActionSupport">
+		<property name="configurationBean"><ref bean="configurationBean" /></property>
+		<property name="sessionBean"><ref bean="sessionBean" /></property>
+		<property name="textBean"><ref bean="textBean" /></property>
+	</bean>
+</beans>

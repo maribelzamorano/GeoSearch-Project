@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="portal_navigation" extends="topdev-default" namespace="/portal_navigation">
+		<action name="view" class="com.opensymphony.xwork2.ActionSupport">
+			<result name="success">/pages/modules/portal_navigation/view.jsp</result>
+		</action>
+	</package>
+</struts>

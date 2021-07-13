@@ -1,0 +1,385 @@
+<?xml version="1.0"?>
+<!DOCTYPE liferay-portlet-app PUBLIC "-//Liferay//DTD Portlet Application 4.3.0//EN" "http://www.liferay.com/dtd/liferay-portlet-app_4_3_0.dtd">
+<liferay-portlet-app>
+
+	<portlet>
+		<portlet-name>portlet_katalog</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+
+	<portlet>
+		<portlet-name>portlet_businesspartner</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+
+	<portlet>
+		<portlet-name>portlet_mybusinesspartner</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+
+	<portlet>
+		<portlet-name>portlet_school_search</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+
+
+	<portlet>
+		<portlet-name>portlet_section_documents</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+
+	<portlet>
+		<portlet-name>portlet_school_intention</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+
+	<portlet>
+		<portlet-name>portlet_neuter_resources</portlet-name>
+		
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+
+	<portlet>
+		<portlet-name>portlet_personal_resources</portlet-name>
+		
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+
+	<portlet>
+		<portlet-name>portlet_personal_resources_statistic</portlet-name>
+		
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+
+	<portlet>
+		<portlet-name>portlet_cooperation</portlet-name>
+		
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>portlet_contributer</portlet-name>
+		
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+
+	<portlet>
+		<portlet-name>portlet_documents</portlet-name>
+		<struts-path>tis-online-portlet/portlet_school_evolution</struts-path>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+
+	<portlet>
+		<portlet-name>portlet_learner_structure</portlet-name>
+		<struts-path>tis-online-portlet/portlet_school_evolution</struts-path>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+
+	<portlet>
+		<portlet-name>portlet_school_evolution</portlet-name>
+		<struts-path>tis-online-portlet/portlet_school_evolution</struts-path>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>portlet_media</portlet-name>
+		<struts-path>tis-online-portlet/portlet_media</struts-path>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+		<portlet>
+		<portlet-name>portlet_pupil_magazine</portlet-name>
+		<struts-path>tis-online-portlet/portlet_pupil_magazine</struts-path>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+		<portlet>
+		<portlet-name>portlet_working_group</portlet-name>
+		<struts-path>tis-online-portlet/portlet_working_group</struts-path>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+		<portlet>
+		<portlet-name>portlet_school_library</portlet-name>
+		<struts-path>tis-online-portlet/portlet_school_library</struts-path>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+
+	<portlet>
+		<portlet-name>portlet_school_life</portlet-name>
+		<struts-path>tis-online-portlet/portlet_school_life</struts-path>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>portlet_school_evolution</portlet-name>
+		<struts-path>tis-online-portlet/portlet_school_evolution</struts-path>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>portlet_activate_quality</portlet-name>
+		<struts-path>tis-online-portlet/portlet_activate_quality</struts-path>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+
+	<portlet>
+		<portlet-name>portlet_portal_navigation</portlet-name>
+		<struts-path>tis-online-portlet/portlet_school_evolution</struts-path>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+
+	<portlet>
+		<portlet-name>portlet_school_navigation</portlet-name>
+		<struts-path>tis-online-portlet/portlet_school_evolution</struts-path>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>10</render-weight>
+	</portlet>
+
+	<portlet>
+		<portlet-name>portlet_login</portlet-name>
+		<struts-path>tis-online-portlet/portlet_school_evolution</struts-path>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>portlet_system</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>portlet_school_image</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>portlet_contact</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>portlet_medium_category</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>portlet_medium_logview</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>portlet_medium_navigation</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>portlet_medium_result</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+<!-- 	<instanceable>true</instanceable> -->
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>portlet_medium_result_newest</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>portlet_medium_result_favorite</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>portlet_medium_search</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>portlet_medium_detail_overview</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>portlet_medium_detail_preview</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>portlet_medium_detail_links</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>portlet_medium_detail_files</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>portlet_portrait_schools_bychance</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+	<portlet>
+		<portlet-name>portlet_common_image</portlet-name>
+		<use-default-template>true</use-default-template>
+		<restore-current-view>true</restore-current-view>
+		<private-request-attributes>false</private-request-attributes>
+		<private-session-attributes>true</private-session-attributes>
+		<render-weight>1</render-weight>
+	</portlet>
+	
+</liferay-portlet-app>

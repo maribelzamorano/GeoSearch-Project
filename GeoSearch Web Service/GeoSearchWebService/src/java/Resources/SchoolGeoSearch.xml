@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!--
+    Document   : School.xml
+    Created on : 11. 08 2010, 16:39
+    Author     : maribelzamorano
+    Description:
+        Purpose of the document follows.
+-->
+<!DOCTYPE sqlMap
+PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"
+"http://ibatis.apache.org/dtd/sql-map-2.dtd">
+<sqlMap namespace="geoSearch.topdev.com.BobjGeoSchool">
+<!-- Usa un recubrimiento de un tipo primitivo (ej. java.lang.Integer) como parámetro y permite
+que los resultados sean auto-mapeados a las propiedades del JavaBean Person -->
+
+
+
+  <parameterMap id="Parameter" class="geoSearch.topdev.com.BobjGeoSchool">
+            <parameter property="radius"                                mode="IN"		jdbcType="INTEGER" nullValue=""/>
+            <parameter property="numberOfNearest"                       mode="IN"		jdbcType="INTEGER" nullValue=""/>
+            <parameter property="userLongitude"                         mode="IN"		jdbcType="INTEGER" nullValue=""/>
+            <parameter property="userLatitude"                          mode="IN"		jdbcType="INTEGER" nullValue=""/>
+            <parameter property="spss_code"                             mode="IN"		jdbcType="INTEGER" nullValue=""/>
+            <parameter property="suchbegriff"                           mode="IN"		jdbcType="VARCHAR" nullValue=""/>
+            <parameter property="gepa_id_traeger"                       mode="IN"		jdbcType="INTEGER" nullValue=""/>
+            <parameter property="page"                                  mode="IN"		jdbcType="INTEGER" nullValue=""/>
+            <parameter property="krei_id"                               mode="IN"		jdbcType="INTEGER" nullValue=""/>
+            <parameter property="plz"                                   mode="IN"		jdbcType="VARCHAR" nullValue=""/>
+            <parameter property="cc_strasse"                            mode="IN"		jdbcType="VARCHAR" nullValue=""/>
+            <parameter property="max_char"	  			mode="IN"		jdbcType="INTEGER" nullValue=""/>
+            <parameter property="schu_id"	  			mode="IN"		jdbcType="INTEGER" nullValue=""/>
+            <parameter property="dien_nr"	  			mode="IN"		jdbcType="VARCHAR" nullValue=""/>
+            <parameter property="gepa_name"                             mode="IN"		jdbcType="VARCHAR" nullValue=""/>
+            <parameter property="ort"                                   mode="IN"		jdbcType="VARCHAR" nullValue=""/>
+            <parameter property="rows"                                  mode="IN"		jdbcType="INTEGER" nullValue=""/>
+            <parameter property="session_id"                            mode="IN"		jdbcType="VARCHAR" nullValue=""/>
+            <parameter property="rc"                                    mode="INOUT"		jdbcType="INTEGER" nullValue=""/>
+            <parameter property="rowCounter"                            mode="INOUT"		jdbcType="INTEGER" nullValue=""/>
+            <parameter property="sql_error"	  			mode="INOUT"		jdbcType="INTEGER" nullValue=""/>
+            <parameter property="rc_text"                               mode="INOUT"		jdbcType="VARCHAR" nullValue=""/>
+   </parameterMap>
+
+
+    <procedure id="School.getGeoSearchResults" resultClass="geoSearch.topdev.com.BobjGeoSchool"  parameterMap="Parameter">
+                {
+		call tspadm.psp_getSchule
+		(
+                        @RADIUS=?,
+                        @NUMBER_OF_NEAREST=?,
+                        @USER_LONGITUDE=?,
+                        @USER_LATITUDE=?,
+                        @SPSS_CODE=?,
+                        @SUCHBEGRIFF=?,
+                        @GEPA_ID_TRAEGER=?,
+                        @PAGE=?,
+                        @KREI_ID=?,
+                        @PLZ=?,
+                        @STRASSE=?,
+                        @MAX_CHAR=?,
+                        @SCHU_ID=?,
+                        @DIEN_NR=?,
+                        @GEPA_NAME=?,
+                        @ORT=?,
+                        @ROWS=?,
+                        @SESSION_ID=?,
+                        @RC=?,
+                        @ROWCOUNTER=?,
+                        @SQL_ERROR=?,
+                        @RC_TEXT=?
+		)
+             }
+    </procedure>
+
+
+</sqlMap>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="activate_quality" extends="topdev-default" namespace="/activate_quality">
+		<interceptors>
+			<interceptor name="topdev-action" class="com.topdev.tsp.interceptor.ActionInterceptor"/>
+		</interceptors>
+		
+		<action name="index" class="com.topdev.tsp.action.modules.activate_quality.DetailAction">
+			<result name="view">/pages/modules/activate_quality/view.jsp</result>
+			<result name="edit">/pages/modules/activate_quality/edit.jsp</result>
+			<result name="saved">/pages/modules/activate_quality/saved.jsp</result>
+		</action>
+		
+		<action name="view" class="com.topdev.tsp.action.modules.activate_quality.DetailAction" method="view">
+			<result name="view">/pages/modules/activate_quality/view.jsp</result>
+			<result name="edit">/pages/modules/activate_quality/edit.jsp</result>
+			<result name="saved">/pages/modules/activate_quality/saved.jsp</result>
+		</action>	
+
+		<action name="edit" class="com.topdev.tsp.action.modules.activate_quality.DetailAction" method="edit">
+			<result name="view">/pages/modules/activate_quality/view.jsp</result>
+			<result name="edit">/pages/modules/activate_quality/edit.jsp</result>
+			<result name="saved">/pages/modules/activate_quality/saved.jsp</result>
+		</action>
+		
+		<action name="save" class="com.topdev.tsp.action.modules.activate_quality.DetailAction" method="save">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="saved">/pages/lib/component/saved.jsp</result>
+		</action>			
+<!-- Drucken_______________________________________________________________________________________________________________________________-->
+		<action name="print" class="com.topdev.tsp.action.modules.activate_quality.DetailAction" method="print">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+		</action>			
+
+<!-- Partner __________________________________________________________________________________________________________________________-->
+		<action name="expertise-list_*" class="com.topdev.tsp.action.modules.activate_quality.submodules.ExpertiseListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/activate_quality/submodules/list-expertise.jsp</result>
+		</action>
+		<action name="expertise-detail_*" class="com.topdev.tsp.action.modules.activate_quality.submodules.ExpertiseDetailAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/activate_quality/submodules/form-expertise.jsp</result>
+			<result name="list" type="chain">expertise-list_edit</result>
+		</action>
+	</package>
+</struts>

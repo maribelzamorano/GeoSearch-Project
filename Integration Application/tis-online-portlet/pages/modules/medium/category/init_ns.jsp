@@ -1,0 +1,1 @@
+<% request.setAttribute("ns", "medium_category"); %>

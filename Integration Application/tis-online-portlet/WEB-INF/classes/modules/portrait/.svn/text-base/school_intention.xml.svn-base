@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN" "http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="school_intention" extends="topdev-default" namespace="/school_intention">
+		<interceptors>
+			<interceptor name="topdev-action" class="com.topdev.tsp.interceptor.ActionInterceptor"/>
+		</interceptors>
+
+		<action name="index" class="com.topdev.tsp.action.modules.school_intention.DetailAction">
+			<result name="view">/pages/modules/school_intention/view.jsp</result>
+			<result name="edit">/pages/modules/school_intention/edit.jsp</result>
+			<result name="saved">/pages/modules/school_intention/saved.jsp</result>
+		</action>
+		
+		<action name="view" class="com.topdev.tsp.action.modules.school_intention.DetailAction" method="view">
+			<result name="view">/pages/modules/school_intention/view.jsp</result>
+			<result name="edit">/pages/modules/school_intention/edit.jsp</result>
+			<result name="saved">/pages/modules/school_intention/saved.jsp</result>
+		</action>	
+
+		<action name="edit" class="com.topdev.tsp.action.modules.school_intention.DetailAction" method="edit">
+			<result name="view">/pages/modules/school_intention/view.jsp</result>
+			<result name="edit">/pages/modules/school_intention/edit.jsp</result>
+			<result name="saved">/pages/modules/school_intention/saved.jsp</result>
+		</action>
+		
+		<action name="save" class="com.topdev.tsp.action.modules.school_intention.DetailAction" method="save">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="saved">/pages/lib/component/saved.jsp</result>
+		</action>	
+<!-- Drucken_______________________________________________________________________________________________________________________________-->
+		<action name="print" class="com.topdev.tsp.action.modules.school_intention.DetailAction" method="print">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+		</action>			
+		
+		<action name="detail_*" class="com.topdev.tsp.action.modules.school_intention.DetailAction" method="{1}">
+			<result name="success">/pages/modules/school_intention/edit.jsp</result>
+		</action>
+	
+<!-- __________________________________________________________________________________________________________________________ -->
+		<action name="intention-list_*" class="com.topdev.tsp.action.modules.school_intention.submodules.IntentionListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/school_intention/submodules/list-intention.jsp</result>
+		</action>
+
+		<action name="intention-detail_*" class="com.topdev.tsp.action.modules.school_intention.submodules.IntentionDetailAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/school_intention/submodules/form-intention.jsp</result>
+			<result name="list" type="chain">intention-list_edit_filter</result>
+		</action>		
+<!-- __________________________________________________________________________________________________________________________ -->
+		<action name="foreignlanguage-list_*" class="com.topdev.tsp.action.modules.school_intention.submodules.ForeignLanguageListAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/school_intention/submodules/list-foreignlanguage.jsp</result>
+		</action>
+
+		<action name="foreignlanguage-detail_*" class="com.topdev.tsp.action.modules.school_intention.submodules.ForeignLanguageDetailAction" method="{1}">
+			<interceptor-ref name="topdevDefaultActionStack"/>
+			<result name="success">/pages/modules/school_intention/submodules/form-foreignlanguage.jsp</result>
+			<result name="list" type="chain">foreignlanguage-list_edit</result>
+		</action>		
+	</package>
+</struts>

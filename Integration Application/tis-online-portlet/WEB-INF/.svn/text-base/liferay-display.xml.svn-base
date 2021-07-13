@@ -1,0 +1,49 @@
+<?xml version="1.0"?>
+<!DOCTYPE display PUBLIC "-//Liferay//DTD Display 5.0.0//EN" "http://www.liferay.com/dtd/liferay-display_5_0_0.dtd">
+
+<display>
+	<category name="TSP Portlets">
+		<category name="Schulportraet">
+			<portlet id="portlet_businesspartner" />
+			<portlet id="portlet_mybusinesspartner" />
+			<portlet id="portlet_school_search" />
+			<portlet id="portlet_section_documents" />
+			<portlet id="portlet_school_intention" />
+			<portlet id="portlet_neuter_resources" />
+			<portlet id="portlet_personal_resources" />
+			<portlet id="portlet_personal_resources_statistic" />
+			<portlet id="portlet_cooperation" />
+			<portlet id="portlet_contributer" />
+			<portlet id="portlet_documents" />
+			<portlet id="portlet_learner_structure" />
+			<portlet id="portlet_school_evolution" />
+			<portlet id="portlet_media" />
+			<portlet id="portlet_pupil_magazine" />
+			<portlet id="portlet_working_group" />
+			<portlet id="portlet_school_library" />
+			<portlet id="portlet_school_life" />
+			<portlet id="portlet_activate_quality" />
+			<portlet id="portlet_school_navigation" />
+			<portlet id="portlet_school_image" />
+			<portlet id="portlet_portrait_schools_bychance" />
+		</category>
+
+		<category name="Mediendistribution">
+			<portlet id="portlet_medium_category" />
+			<portlet id="portlet_medium_navigation" />
+			<portlet id="portlet_medium_result" />
+			<portlet id="portlet_medium_result_newest" />
+			<portlet id="portlet_medium_result_favorite" />
+			<portlet id="portlet_medium_search" />
+			<portlet id="portlet_medium_detail" />
+			<portlet id="portlet_medium_logview" />
+		</category>
+
+		<portlet id="portlet_portal_navigation" />
+		<portlet id="portlet_login" />
+		<portlet id="portlet_system" />
+		<portlet id="portlet_contact" />
+		<portlet id="portlet_common_image" />
+
+	</category>
+</display>
